@@ -6,6 +6,14 @@
 
 Make sure that the craft can load into the stock game with only Bon Voyage and MKS/WOLF addons.
 
+## Hoppers
+
+ + 2.5m manufacturing hopper
+   + 2 WOLF Material Kit -> 2000 Material Kits/day
+   + 2 WOLF Specialised Parts -> 529.1 Specialised Parts/day
+   + 1 WOLF Alloys -> 128.21 Alloys/day
+ + 3.75m manufacturing hopper 5 WOLF Material Kit -> 5000 Material Kits/day
+
 ## Packaging
 
 I'll need a Makefile to prepare a ZIP archive of:
@@ -13,9 +21,20 @@ I'll need a Makefile to prepare a ZIP archive of:
   + Ships
   + Subassemblies
 
+# Screenshots required
+
+# Locations
+
+  + KSC (-0.1, -74.647)
+  + Just north of runway (-0.04, -74.709)
+  + Kerbin Shores (0.01,-74.8)
+  + Grasslands (0.0 -75.38)
+  + Highlands (1.741, -77.339)
+  + Mountains (0.637, -78.659)
+
 # References
 
 [KSPFORUMMKS]: https://forum.kerbalspaceprogram.com/index.php?/topic/154587-111x-modular-kolonization-system-mks/ "KSP Forum: MKS Announcement Thread"
 [WOLFIWPC]: https://github.com/UmbraSpaceIndustries/MKS/wiki/WOLF-%E2%80%94-Industry-without-the-part-count "WOLF: Industry without the part count"
-[MRWOFLTS]: https://github.com/MaraRinn/WOLF-Tutorial-Ships "Mara Rinn's WOLF Tutorial Ships repository"
+[MRWOLFTS]: https://github.com/MaraRinn/WOLF-Tutorial-Ships "Mara Rinn's WOLF Tutorial Ships repository"
 [BCRESDIAG]: https://forum.kerbalspaceprogram.com/index.php?/topic/154587-111x-modular-kolonization-system-mks/&do=findComment&comment=4026544 "bigcalm's resource diagram"
