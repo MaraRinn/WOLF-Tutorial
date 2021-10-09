@@ -25,12 +25,19 @@ I'll need a Makefile to prepare a ZIP archive of:
 
 # Locations
 
-  + KSC (-0.1, -74.647)
-  + Just north of runway (-0.04, -74.709)
+  + KSC/right next to Kerbal centre (-0.1, -74.647)
+  + KSC/Shores Just north of runway (-0.04, -74.709)
   + Kerbin Shores (0.01,-74.8)
   + Grasslands (0.0 -75.38)
   + Highlands (1.741, -77.339)
   + Mountains (0.637, -78.659)
+
+# To Do
+
+ + Extract list of screenshot names from wiki_page.md
+ + Figure out a Markdown notation to provide the caption and filename for each screenshot
+ + Find or build a tool to build TOC from Markdown headings
+ + Find or build a tool to generate table of illustrations
 
 # References
 
