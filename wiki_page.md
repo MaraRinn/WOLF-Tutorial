@@ -44,7 +44,7 @@ I'll be attempting to show how WOLF compares to MKS for certain tasks. The walkt
 
 # WOLF for the Adventurous
 
-RoverDude wrote up [this introduction to WOLF](https://docs.google.com/document/d/1zft2Ka9gubOYQf4CQgvReTxpnP8_LQYNyHouEjQZqjw/edit) which outlines most of what you need to know to get started. There's also RoverDude's [explanation of transport routes and transport credits] which will be expanded upon in this walkthrough. This walkthrough really only restates what is written there with a few step by step examples and an end goal of manufacturing spaceships at an orbital shipyard.
+RoverDude wrote up [this introduction to WOLF][RDWOLF1] which outlines most of what you need to know to get started. There's also RoverDude's [explanation of transport routes and transport credits][RDTRAN1] which will be expanded upon in this walkthrough. This walkthrough really only restates what is written there with a few step by step examples and an end goal of manufacturing spaceships at an orbital shipyard.
 
 ## WOLF Resource Conversions
 
@@ -99,7 +99,7 @@ As soon as you start the new sandbox game, head to the SPH and build yourself a 
 
 ![The WOLF Depot Deployer rover with important components marked: surface scanner, transport computer and bon voyage autopilot](https://i.imgur.com/tbamdi2.png)
 
-Launch this vessel and open the **Surface Scanning Module** PAW (right-click menu). You'll see the usual MKS resource details in the Surface Scanning Module's window. For each resource there's a concentration tagged "[Surf]" (because it's a resource on the surface) which is then combined with harvester efficiency to determine how much of that resource you'll be extracting per second. WOLF doesn't use that data.
+Launch this vessel and open the **Surface Scanning Module** PAW (Part Action Window, aka right-click menu). You'll see the usual MKS resource details in the Surface Scanning Module's window. For each resource there's a concentration tagged "[Surf]" (because it's a resource on the surface) which is then combined with harvester efficiency to determine how much of that resource you'll be extracting per second using MKS parts. WOLF doesn't use that data.
 
 Now open the **WOLF Dashboard** and select the *Harvestable Resources* pane. You'll see that it's empty right now.
 
@@ -107,7 +107,7 @@ Now open the **WOLF Dashboard** and select the *Harvestable Resources* pane. You
 
 Looking back to the **Surface Scanning Module** PAW, there is one line under the MKS resources list specifying the "WOLF biome". You'll also see the "Survey WOLF Biome" action. Click it!
 
-![Surface Scanning Module PAW showing the usual MKS resources along with the WOLF Biome name and Survey WOLF Biome action](https://surfacescanningmodule.jpg)
+![Surface Scanning Module PAW showing the usual MKS resources along with the WOLF Biome name and Survey WOLF Biome action. The WOLF Biome name and Survey WOLF Biome action are highlighted](https://surfacescanningmodule.jpg)
 
 Recover this vessel.
 
@@ -124,9 +124,9 @@ You'll have one Body/Biome option: Kerbin:KSC. There are four columns here which
 3. Harvested, which is how much of the abundance you are currently extracting
 4. Remaining, which is how much of the abundance is left to extract
 
-![SPH scene showing WOLF Dashboard open to Depots pane](https://i.imgur.com/3LUj6WM.png)
-
 The *Depots* pane lists all your active WOLF Depots. Since you have no depots yet, it's empty.
+
+![SPH scene showing WOLF Dashboard open to Depots pane](https://i.imgur.com/3LUj6WM.png)
 
 # WOLF Depots
 
@@ -281,6 +281,8 @@ Here's an example of routes between multiple biomes that I prepared earlier:
 
 ![Multiple routes created between Kerbin Shores and KSC mean that route now has a payload capacity of 12](https://i.imgur.com/hZpj49i.jpg)
 
+If you want to speed up the process, check out the **WOLF Route Builder Rover** which is basically three giant Kontainers on wheels, and the subassemblies associated with it: RBR Trailer (another Kontainer with wheels, providing a skeleton for your depot modules to attach to), RBR 
+
 Now to actually use those routes!
 
 ## WOLF Shipments
@@ -358,7 +360,7 @@ Revert to launch and do the same thing with a 3.75m rocket. The *WOLF Tutorial 3
 
 Send that to the launch pad, select the "connect to origin depot" on the WOLF Transport Computer, and launch the rocket to an 80km orbit. As before, check the "route cost", revert to launch and run the process again to show that the "route cost" is predictable. My flights came up with a route cost of 86, giving a *Transport Credit Per Unit* cost of around 6.14.
 
-Now do the same thing with spaceplanes. The two I use are the **WOLF SSTO** and the [ES-96 Python by Juggernoob](https://steamcommunity.com/sharedfiles/filedetails/?id=1722161481) which I find to be an aesthetically pleasing and easy-to-fly SSTO spaceplanes. **Instructions:** for both these spaceplanes the procedure to get to orbit is just set throttle to maximum, turn SAS on to stability assist, stage once to light the engines, rotate off the runway to 10 degrees at about 140m/s and hold the nose at 10 degrees for the whole flight through the atmosphere. When the airbreathing mode is insufficient to keep accelerating, switch to closed cycle (Action Group 1) and push the apoapsis to 80km and cut the throttle. Cruise to the top of the atmosphere, plot a circularisation burn at apoapsis, and execute that burn. My flights with **WOLF SSTO** ended up producing routes with a cost of 9 for 3t cargo, or about 3 credits/unit. The **ES-96 Python** got to orbit in the order of 90 Credits for 42t -- you'll need to pull the orange tank payload out and put in 6 x 3.5m WOLF Cargo Kontainers, two end-to-end where the orange tank started, then the other four stacked on top in pairs and then clipped into the cargo bay so they are fully contained. The **WOLF ES-96 Python** in the tutorial ships package has already been modified and will automatically start the transport route when you stage to launch (the **Transport Computer** is in the cargo bay).
+Now do the same thing with spaceplanes. The two I use are the **WOLF SSTO** and the [ES-96 Python by Juggernoob](https://steamcommunity.com/sharedfiles/filedetails/?id=1722161481) which I find to be an aesthetically pleasing and easy-to-fly SSTO spaceplanes. **Instructions:** for both these spaceplanes the procedure to get to orbit is just set throttle to maximum, turn SAS on to stability assist, stage once to light the engines, rotate off the runway to 10 degrees at about 140m/s and hold the nose at 10 degrees for the whole flight through the atmosphere. When the airbreathing mode is insufficient to keep accelerating, switch to closed cycle (Action Group 1) and push the apoapsis to 80km and cut the throttle. Cruise to the top of the atmosphere, plot a circularisation burn at apoapsis, and execute that burn. My flights with **WOLF SSTO** ended up producing routes with a cost of 9 for 3t cargo, or about 3 credits/unit. The **ES-96 Python** got to orbit in the order of 90 Credits for 42t -- you'll need to pull the orange tank payload out and put in 6 x 3.5m WOLF Cargo Kontainers, two end-to-end where the orange tank started, then the other four stacked on top in pairs and then clipped into the cargo bay so they are fully contained. The **WOLF ES-96 Python** in the tutorial ships package has already been modified and will automatically start the transport route when you stage to launch (the **Transport Computer** is in the cargo bay with the *Connect to origin depot* action linked to the *stage* action group).
 
 ## Transport Module for Transport Credits
 
@@ -393,38 +395,47 @@ The nice thing about SSTOs is an extremely low route cost for the deorbiting of 
 
 ## How To Avoid Transport Credit Costs of Propellant-Consuming Vehicles
 
-Now that you've gone to the effort of establishing that Transport Credit infrastructure, I have a confession to make. You can make the system work to your advantage and completely eliminate the Transport Credit cost of these SSTO flights.
+Now that you've gone to the effort of establishing that Transport Credit infrastructure, I have a confession to make. You can make the system work to your advantage and completely eliminate the Transport Credit cost of these route-building flights.
 
-How? Put a propellant depot in orbit, fly your transport vehicle to that depot and refuel before connecting the **WOLF Transport Computer** to the destination depot.
+How? Put a propellant depot in orbit, fly your transport vehicle to that depot and refuel before connecting the **WOLF Transport Computer** to the destination depot. This is how you'd do it if you had an established MKS or stock infrastructure (for example exporting propellant from Minmus to Kerbin orbit), flying your freighter to the destination and refuelling to get it back to the origin port.
 
 Here's the **WOLF SSTO** at the end of a 3t haul to orbit having just refuelled. How many transport credits to fly 3t to orbit? 0.
 
 ![In orbit, WOLF SSTO has been refuelled using MKS resource transfer window and Transport Computer is showing a route cost from KSC to Orbit of 0 Transport Credits]()
 
-Go back and load your "Before Transport Credits" save game. As an apology for giving you the runaround, please accept the **WOLF Tutorial Propellant Depot** that you'll find in the tutorial ships package. Launch that craft to orbit, undock the **WOLF Depot** component and establish the orbital depot. You can rendezvous a small route-building craft with this depot to refuel (for example the **WOLF SSTO**), and start building your orbital industry from there.
+Go back and load your "Before Transport Credits" save game. If you're happy to take a shortcut for the purpose of the walkthrough, load the **WOLF Type 3 Propellant Depot** that you'll find in the SPH from the tutorial ships package. Cheat that craft to orbit (Alt+F12, Cheats, Set Orbit, use 690000 for the SMA), undock the **WOLF Depot** component and establish the orbital depot. You can rendezvous a route-building craft with this depot to refuel (for example the **WOLF SSTO** or **WOLF ES-96 Python**), and start building your orbital industry from there.
 
-If you want to build your own depot, the key components here are the **2.5m WOLF Fuel Hopper** (or the **3.75m WOLF Fuel Hopper**) and the local storage for the propellant types the hopper will be producing. There's no built-in storage for the hopper, its only purpose is to extract resources from the WOLF infrastructure and deliver them to MKS infrastructure at which point all the usual MKS rules apply -- most notably having storage for materials to be consumed while the production facility is packed up out of physics range. Note that the **2.5m WOLF Fuel Hopper** will convert 2 *Fuel* abundance into 180 *Liquid Fuel* and 220 *Oxidiser* per day. Refilling the 1440 *Liquid Fuel* and 1760 *Oxidiser* of the orbital depot's storage tank will take about 8 days. Refuelling the **WOLF SSTO** will take about 2000 *Liquid Fuel*, so at some point you may want to launch a second **WOLF Tutorial Propellan Depot** and dock the two together. You'll need far more production and storage capacity to service frequent flights with the **WOLF ES-96 Python**. 
+If you want to build your own depot, the key components here are the **WOLF Fuel Hopper** (available in 2.5m or 3.75m versions) and the *local storage for the propellant types* the hopper will be producing. There's no built-in storage for the hopper, its only purpose is to extract resources from the WOLF infrastructure and deliver them to Stock/MKS infrastructure at which point all the usual Stock/MKS rules apply -- most notably having storage for materials to be consumed while the production facility is packed up out of physics range. Note that the **2.5m WOLF Fuel Hopper** will convert 2 *Fuel* abundance into 180 *Liquid Fuel* and 220 *Oxidiser* per day. Refilling the 1440 *Liquid Fuel* and 1760 *Oxidiser* of the orbital depot's storage tank will take about 8 days. Refuelling the **WOLF SSTO** will take up to 2000 *Liquid Fuel* though getting a zero route cost at 80x80km should cost far less.
+
+ Another hint for setting up zero-cost routes: you only need the propellant in the vehicle at the time that you complete the route. After that you can take all the propellant back out except for what's absolutely necessary to land back at KSC. All you are doing here is showing the WOLF Transport Computer that you have infrastructure available to support refuelling, and you're not using expendable rockets.
 
 # Extracting Resources from WOLF
 
-Now you have the **WOLF Tutorial Propellant Depot** in orbit, make sure you have sufficient propellant available to refuel the **WOLF SSTO** -- remembering that this craft needs about 1000 *Liquid Fuel* and 600 *Oxidier* to get the route cost to 0. Launch a **Propellant Tanker**, rendezvous with the propellant depot and transfer all the propellant from the depot that will fit in the tanker, then later you'll take the tanker to rendezvous with the **WOLF SSTO**. Note that the provided **WOLF SSTO** has no docking ports, it's intended to be refuelled using the MKS **Resource Transfer** window.
+Now you have the **WOLF Type 3 Propellant Depot** or equivalent infrastructure in orbit, make sure you have sufficient propellant available to refuel the route building vehicle-- remembering that the **WOLF SSTO** needs about 1000 *Liquid Fuel* and 600 *Oxidier* to get the route cost to 0. Note that neither the **WOLF SSTO** nor **WOLF ES-96 Python** have docking ports, they're intended to be refuelled using the MKS **Resource Transfer** window.
 
-With bootstrapping supplies taken care of, let's connect the abundance of *Fuel* produced on Kerbin to the depot in orbit. In this example we'll start with the **WOLF SSTO** because its route capacity is enough to supply the single 2.5m hopper on the **WOLF tutorial Propellant Depot** -- the 2.5m hopper consumes 2 *Fuel* abundance and the **WOLF SSTO** can build a 3-unit route. If you have more hoppers to feed, either use more flights of the smaller route builder craft, or use a larger route builder craft. Perform the usual **WOLF SSTO** mission, remembering to connect the **WOLF Transport Computer** to the KSC depot before launch, and refuelling the plane before connecting to the destination depot. With the route established, prepare a shipment of 2 *Fuel* from KSC to Kerbin Orbit:
+With bootstrapping supplies taken care of, let's connect the abundance of *Fuel* produced on Kerbin to the depot in orbit. In this example we'll start with the **WOLF ES-96 Python** because it has plenty of payload capacity. If you have more hoppers to feed, either use more flights, or use a larger route builder craft. Perform the usual SSTO mission, remembering to connect the **WOLF Transport Computer** to the KSC depot before launch, and refuelling the plane before connecting to the destination depot. With the route established, prepare a shipment of 20 *Fuel* from KSC to Kerbin Orbit:
 
-![WOLF SSTO in Kerbin orbit with Propellant Tanker in background and WOLF Transport Computer action window showing route cost 0 and route payload 3]()
+![WOLF ES-96 Python in Kerbin orbit with Propellant Depot in background and WOLF Transport Computer action window showing route cost 0 and route payload 45]()
 
-Now switch to the **WOLF Tutorial Propellant Depot** and set the hopper up:
+Now open the **WOLF Dashboard** to the *Depots* pane, expand the *Kerbin: Orbit* depot, and set the hopper up:
 
- 1. Open the hopper's PAW
+ 1. Open the hopper's PAW (for this we want the PAW and the WOLF Dashboard open)
  1. Click *Connect to depot*
  2. Click *Start hopper*
 
-Note that the abundance of a resource will be reduced the moment you connect the hopper to the depot, regardless of whether or not the hopper is running. Here's what it should look like for you now:
+Observe that the abundance of a resource will be reduced the moment you connect the hopper to the depot, regardless of whether or not the hopper is running. Here's what it should look like for you now:
 
-![At the propellant depot in orbit, WOLF Dashboard is open to the Routes pane and a shipment of 2 Fuel has been added between KSC and Kerbin Orbit]()
+![At the propellant depot in orbit, WOLF Dashboard is open to the Depots pane and the Kerbin: Orbit depot is expanded to show the incoming/outgoing/available resources. There is Fuel outgoing to service the fuel hopper.]()
 
-While you are here, keep the **WOLF Dashboard** open and see what happens when you stop the hopper and disconnect it from the depot. What you should see happen is that the local resource production will stop when you stop the hopper, and the abundance of *Fuel* in the WOLF depot will change from 2 *Outgoing* to 2 *Available*. When you're ready, reconnect the hopper and start it up again. Then switch to the tanker and bring it to dock with the depot -- over time the hopper will will the tanks on the tanker and the depot.
+While you are here, keep the **WOLF Dashboard** open and see what happens when you stop the hopper and disconnect it from the depot. What you should see happen is that the local resource production will stop when you stop the hopper, and the abundance of *Fuel* in the Kerbin Orbit depot will change from *Outgoing* to *Available*. When you're ready, reconnect the hopper and start it up again. Then bring the route builder back to KSC.
 
+# WOLF Walkthrough Conclusion
 
+We haven't finished building this walkthrough. Still to come are sending material kits to the Kerbin Orbit depot, and sorting out the infratructure to build craft using the shipyard, then deploying new infrastructure on Minmus and Duna.
+
+Come back later to check things out.
 
 [MRWOLFTS]: https://github.com/MaraRinn/WOLF-Tutorial-Ships "Mara Rinn's WOLF Tutorial Ships repository"
+[RDWOLF1]: https://docs.google.com/document/d/1zft2Ka9gubOYQf4CQgvReTxpnP8_LQYNyHouEjQZqjw/edit "Roverdude's introduction to WOLF"
+[RDTRAN1]: https://docs.google.com/document/d/1BEqW60RrnYiVJKpAIFHAUqhdBrzbwwQ7KsaJ8hZjH4w/edit "Roverdude's introduction to transport credits"
+
