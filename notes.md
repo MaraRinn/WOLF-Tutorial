@@ -40,6 +40,7 @@ I'll need a Makefile to prepare a ZIP archive of:
  + Figure out a Markdown notation to provide the caption and filename for each screenshot
  + Find or build a tool to build TOC from Markdown headings
  + Find or build a tool to generate table of illustrations
+ + Resource conversion table listing the producer that you can get desired materials from (ie: one column for a resource, second column showing which modules have the recipe)
 
 # References
 
