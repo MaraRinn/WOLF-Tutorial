@@ -31,6 +31,8 @@ I'll need a Makefile to prepare a ZIP archive of:
   + Grasslands (0.0 -75.38)
   + Highlands (1.741, -77.339)
   + Mountains (0.637, -78.659)
+  + Desert (1.472, -86.435)
+  + Ice Caps (71.386, -92.709) which needs a waypoint around (36.898, -63.906) on the way there and back to constrain the route finding
 
 # To Do
 
