@@ -76,7 +76,7 @@ Let's have a look at how WOLF biomes and production chains work. Create a new sa
 
 If you want to use the tutorial ships, get the [WOLF Tutorial Ships][MRWOLFTS] release file and unpack it now. Put put the **Ships** and **Subassemblies** folders into your save directory.
 
-![The Kerbal Space Program saves directory showing the WOLF Tutorial save folder. Alongside that is the WOLF_Tutorial_Ships ZIP file contents. An arrow indicates that the contents of the ZIP file should be dragged directly to the WOLF Tutorial save folder]()
+![The Kerbal Space Program saves directory showing the WOLF Tutorial save folder. Alongside that is the WOLF_Tutorial_Ships ZIP file contents. An arrow indicates that the contents of the ZIP file should be dragged directly to the WOLF Tutorial save folder][TutorialShipsInstall]
 
 # WOLF Biomes
 
