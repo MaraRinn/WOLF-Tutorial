@@ -2,6 +2,29 @@
 
 ## WOLF Tutorial Ships
 
+How to keep track of which crew are required for which infrastructure lander?
+
+1. Build in colonising waves. One lander for each biome, record what crew are required for each lander, send all the crew in one batch.
+2. Name each lander uniquely, keep a record of which lander is going to which biome and what crew it requires, send crew as required for each lander
+
+Example:
+
++ Poles Fertiliser
+  + Engineer
+  + Kolonist
+  + Mechanic
+  + Medic
+  + Scientist
++ Midlands Food
+  + Farmer
++ Great Flats Rare Metals
+  + Medic
+  + Miner
+  + Scientist
+  + Technician
+
+Then send a crew ship to Minmus with those specialists aboard. Build the landers as you get the materials to do so, put the crew on board and land them. Strike the ship off the list as it's connected to the biome depot.
+
 ## Preparation
 
 Make sure that the craft can load into the stock game with only Bon Voyage and MKS/WOLF addons.
@@ -51,8 +74,18 @@ I'll need a Makefile to prepare a ZIP archive of:
   + 2 WOLF Material Kit -> 2000 Material Kits/day
   + 2 WOLF Specialised Parts -> 529.1 Specialised Parts/day
   + 1 WOLF Alloys -> 128.21 Alloys/day
+  + 1 WOLF Electronics -> 264.55 Electronics/day
+  + 1 WOLF Prototypes -> 264.55 Prototypes/day
+  + 1 WOLF Robotics -> 200.00 Robotics/day
+  + 1 WOLF Synthetics -> 500.00 Synthetics/day
 + 3.75m manufacturing hopper
   + 5 WOLF Material Kit -> 5000 Material Kits/day
+  + 5 WOLF Specialized Parts -> 1322.75 Specialized Parts/day
+  + 1 WOLF Alloys -> 384.62 Alloys/day
+  + 1 WOLF Electronics -> 793.65 Electronics/day
+  + 1 WOLF Prototypes -> 793.65 Prototypes/day
+  + 1 WOLF Robotics -> 600 Robotics/day
+  + 1 WOLF Synthetics -> 1500 Synthetics/day
 
 ### Passengers to Orbit
 
@@ -63,6 +96,54 @@ I'll need a Makefile to prepare a ZIP archive of:
 + 4 food, 4 oxygen, 20 water
 
 ### Components
+
+Note that materials are used in a highly asymmetric ratio something along the lines of:
+
++ 100,000 Material Kits
++ 100 Specialized Parts
++ 100 Synthetics
++ 10 Alloys
++ 1 Robotics
+
+In terms of hopper output, this means that to maintain production at the appropriate ratios we need the following ratio of 3.75m hoppers:
+
++ 12,000 Material Kit hoppers (60,000,000/day)
++ 45 Specialized Parts hoppers (60000/day)
++ 15 Alloys hoppers (6000/day)
++ 40 Synthetics hopper (60000/day)
++ 1 Robotics hopper (600/day)
+
+The strategy we'll apply in this walkhrough is to produce Robotics and Alloys at one location and ship them to shipyards around the Kerbol System, while Material Kits need to be produced very close to the point of consumption, for example being connected to the Shipyard itself. We'll produce Specialised Parts and Synthetics at the shipyard too, and just deal with always having a surplus.
+
+The broad strokes of the walkthrough strategy will thus be:
+
++ Establish Material Kits production
++ Buy the specialized parts and advanced materials required to build Minmus Infrastructure
++ Develop Minmus Infrastructure to produce 5 WOLF Specialized parts and 1 each of the advanced materials
+
+Total production required from Minmus will then be the minimum required to run 1 3.75m hopper of each building material:
+
+1. 5 Specialized Parts
+	+ 2 Refined Exotics
+		+ 2 x (2 Exotic Minerals, 3 Rare Metals)
+	+ 3 Silicon
+2. 1 Synthetics
+	+ 4 Exotic Minerals
+	+ 1 Polymers
+3. 1 Alloys
+	+ 4 Rare Metals
+4. 1 Robotics
+	+ 5 Alloys
+5. 1 Electronics
+	+ 5 Synthetics
+6. 1 Prototypes
+	+ 5 Robotics
+	+ 5 Electronics
+	+ 5 Specialized Parts
+
+Note that the required production of alloys and synthetics is mostly to support the Prototypes production chain.
+
+This will be enough to support production up until around the point we have a thousand Material Kits hoppers.
 
 #### Shipyard
 
@@ -77,6 +158,10 @@ I'll need a Makefile to prepare a ZIP archive of:
 + 85 Specialized Parts
 + 73 Synthetics
 + 2 Robotics
+
+#### Sp/Synthetics Hopper
+
+
 
 #### LF/OX Hopper
 
