@@ -161,7 +161,11 @@ This will be enough to support production up until around the point we have a th
 
 #### Sp/Synthetics Hopper
 
-
++ 24,092 Material Kits
++ 281 Specialized Parts
++ 78 Alloys
++ 73 Synthetics
++ 10 Robotics
 
 #### LF/OX Hopper
 
