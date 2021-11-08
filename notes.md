@@ -4,24 +4,28 @@
 
 How to keep track of which crew are required for which infrastructure lander?
 
-1. Build in colonising waves. One lander for each biome, record what crew are required for each lander, send all the crew in one batch.
+1. Build in batches. One lander for each biome, record what crew are required for each lander, send all the crew in one batch.
 2. Name each lander uniquely, keep a record of which lander is going to which biome and what crew it requires, send crew as required for each lander
 
 Example:
 
-+ Poles Fertiliser
-  + Engineer
-  + Kolonist
-  + Mechanic
-  + Medic
-  + Scientist
-+ Midlands Food
-  + Farmer
+### Crew Transport Pacer
+
++ Greater Flats Polymers
+  + Miner x 2
+  + Technician x 2
 + Great Flats Rare Metals
-  + Medic
-  + Miner
-  + Scientist
+  + Technician x 2
+  + Miner x 2
++ Lesser Flats Rare Metals
+  + Miner x 2
+  + Technician x 2
+
+### Crew Transport Telpix
+
++ Minmus Orbit Advanced Materials
   + Technician
+
 
 Then send a crew ship to Minmus with those specialists aboard. Build the landers as you get the materials to do so, put the crew on board and land them. Strike the ship off the list as it's connected to the biome depot.
 
@@ -87,14 +91,6 @@ I'll need a Makefile to prepare a ZIP archive of:
   + 1 WOLF Robotics -> 600 Robotics/day
   + 1 WOLF Synthetics -> 1500 Synthetics/day
 
-### Passengers to Orbit
-
- 54 passengers (6 * 9) requires:
-
-+ 108 extra habitation
-+ 108 extra life support
-+ 4 food, 4 oxygen, 20 water
-
 ### Components
 
 Note that materials are used in a highly asymmetric ratio something along the lines of:
@@ -123,23 +119,23 @@ The broad strokes of the walkthrough strategy will thus be:
 
 Total production required from Minmus will then be the minimum required to run 1 3.75m hopper of each building material:
 
-1. 5 Specialized Parts
-	+ 2 Refined Exotics
-		+ 2 x (2 Exotic Minerals, 3 Rare Metals)
-	+ 3 Silicon
-2. 1 Synthetics
-	+ 4 Exotic Minerals
-	+ 1 Polymers
-3. 1 Alloys
-	+ 4 Rare Metals
-4. 1 Robotics
-	+ 5 Alloys
-5. 1 Electronics
-	+ 5 Synthetics
-6. 1 Prototypes
-	+ 5 Robotics
-	+ 5 Electronics
-	+ 5 Specialized Parts
+1. Specialized Parts x 5
+   + 2 Refined Exotics
+   + 2 x (2 Exotic Minerals, 3 Rare Metals)
+   + 3 Silicon
+1. Synthetics x 1
+   + Exotic Minerals x 4
+   + 1 Polymers
+3. Alloys x 1
+   + 4 Rare Metals
+4. Robotics x 1
+   + 5 Alloys
+5. Electronics x 1
+   + 5 Synthetics
+6. Prototypes x 1
+   + 5 Robotics
+   + 5 Electronics
+   + 5 Specialized Parts
 
 Note that the required production of alloys and synthetics is mostly to support the Prototypes production chain.
 
@@ -181,6 +177,57 @@ This will be enough to support production up until around the point we have a th
 + 74 Specialized Parts
 + 27 Synthetics
 + 1 Robotics
+
+## Planning A New Expansion
+
+I want to produce Robotics, but robotics requires:
+
++ 5 Alloys
++ 5 Material Kits
++ 2 Lab points
++ 2 Maintenance points
++ 2 Power points
++ 1 engineer Crew point
+
+Each Alloys production requires:
+
++ 4 Rare Metals
++ 1 Metals
++ 1 Lab point
++ 1 Maintenance point
++ 1 Power point
++ 1 Scientist Crew point
+
+So to start with, where can we source 20 Rare Metals? Check all the depots to make sure we have resources directed to orbit, then check harvestable resources for unexploited deposits. The Great Flats and Greater Flats biomes have Rare Metals and Metallic Ore to spare. I'll put a rare metals extraction facility on the **Great Flats**.
+
+Start with the Fabricators to produce 5 Alloys, then add the extractors to provide the raw materials required. Now add the power, maintenance and other support modules. Then add the crew. If the crew require life support and habitation add those too, and keep going until the requirements are met.
+
+Now record the crew that are required, and save this lander -- I use a folder "WOLF Depot Landers" to help keep my ship designs organised.
+
+We have space on the crew transport, let's set up another lander.
+
+Along with the Great Flats alloys production we'll need more Material Kits.
+
+Each Material Kits fabricator requires:
+
++ 1 Chemicals
++ 2 Metals
++ 2 Polymers
++ 1 Maintenance
++ 1 Power
++ 1 Technician Crew point
+
+So ideally a biome which already has Metallic Ore or Substrate to exploit (ideally both), and perhaps with some Minerals to turn into Chemicals. It looks like the **Highlands** have the materials we need.
+
+Start with a Minmus Heavy Lander and add the desired output: in this case a Fabricator set to produce Material Kits. Now add the extraction and processing required to take some Minerals, Metallic Ore and Substrate, and turn them into Chemicals, Metals and Polymers. Along the way you'll need more power and maintenance. Then add the crew and you'll find you need more habitation and life support, and so forth. Eventually you'll reach the limit for the lander frame (36 WOLF modules), at which point keep a note of any surplus production (in my case, there's capacity for 2 more Material Kits fabricators).
+
+## Passengers to Orbit
+
+ 54 passengers (6 * 9) requires:
+
++ 108 extra habitation
++ 108 extra life support
++ 4 food, 4 oxygen, 20 water
 
 ## Screenshots required
 
