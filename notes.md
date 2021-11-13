@@ -25,7 +25,7 @@ Example:
 ~~Greater Flats Chemicals~~
 
 + Engineer
-  + Miner x 2
++ Miner x 2
 + Technician
 
 ~~Highlands Water 2~~
@@ -114,9 +114,10 @@ In terms of hopper output, this means that to maintain production at the appropr
 
 + 12,000 Material Kit hoppers (60,000,000/day)
 + 45 Specialized Parts hoppers (60000/day)
-+ 15 Alloys hoppers (6000/day)
 + 40 Synthetics hopper (60000/day)
++ 15 Alloys hoppers (6000/day)
 + 1 Robotics hopper (600/day)
++ 1 Electronics hopper (793/day)
 
 The strategy we'll apply in this walkhrough is to produce Robotics and Alloys at one location and ship them to shipyards around the Kerbol System, while Material Kits need to be produced very close to the point of consumption, for example being connected to the Shipyard itself. We'll produce Specialised Parts and Synthetics at the shipyard too, and just deal with always having a surplus.
 
