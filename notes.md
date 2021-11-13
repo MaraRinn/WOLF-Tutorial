@@ -28,10 +28,6 @@ Example:
 + Miner x 2
 + Technician
 
-~~Highlands Water 2~~
-
-+ Kolonist
-
 ### Crew Transport Telpix
 
 N/A
