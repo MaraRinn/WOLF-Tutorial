@@ -11,21 +11,30 @@ Example:
 
 ### Crew Transport Pacer
 
-+ Greater Flats Polymers
+~~Minmus Flats Oxygen~~
+
++ Medic
++ Scientist
+
+~~Great Flats Silicon~~
+
++ Geologist x 2
++ Miner
++ Technician
+
+~~Greater Flats Chemicals~~
+
++ Engineer
   + Miner x 2
-  + Technician x 2
-+ Great Flats Rare Metals
-  + Technician x 2
-  + Miner x 2
-+ Lesser Flats Rare Metals
-  + Miner x 2
-  + Technician x 2
++ Technician
+
+~~Highlands Water 2~~
+
++ Kolonist
 
 ### Crew Transport Telpix
 
-+ Minmus Orbit Advanced Materials
-  + Technician
-
+N/A
 
 Then send a crew ship to Minmus with those specialists aboard. Build the landers as you get the materials to do so, put the crew on board and land them. Strike the ship off the list as it's connected to the biome depot.
 
