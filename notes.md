@@ -11,22 +11,7 @@ Example:
 
 ### Crew Transport Pacer
 
-~~Minmus Flats Oxygen~~
-
-+ Medic
-+ Scientist
-
-~~Great Flats Silicon~~
-
-+ Geologist x 2
-+ Miner
-+ Technician
-
-~~Greater Flats Chemicals~~
-
-+ Engineer
-+ Miner x 2
-+ Technician
+N/A
 
 ### Crew Transport Telpix
 
@@ -98,13 +83,15 @@ I'll need a Makefile to prepare a ZIP archive of:
 
 ### Components
 
-Note that materials are used in a highly asymmetric ratio something along the lines of:
+Note that for the craft constructed in this walkthrough, materials are used in a highly asymmetric ratio something along the lines of:
 
 + 100,000 Material Kits
 + 100 Specialized Parts
 + 100 Synthetics
 + 10 Alloys
 + 1 Robotics
++ 1 Electronics
++ 1 Prototypes
 
 In terms of hopper output, this means that to maintain production at the appropriate ratios we need the following ratio of 3.75m hoppers:
 
