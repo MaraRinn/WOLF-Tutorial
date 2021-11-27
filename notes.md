@@ -67,6 +67,7 @@ I'll need a Makefile to prepare a ZIP archive of:
 + 2.5m manufacturing hopper
   + 2 WOLF Material Kit -> 2000 Material Kits/day
   + 2 WOLF Specialised Parts -> 529.1 Specialised Parts/day
+  + 2 WOLF Machinery -> 529.1 Machinery/day
   + 1 WOLF Alloys -> 128.21 Alloys/day
   + 1 WOLF Electronics -> 264.55 Electronics/day
   + 1 WOLF Prototypes -> 264.55 Prototypes/day
@@ -75,6 +76,7 @@ I'll need a Makefile to prepare a ZIP archive of:
 + 3.75m manufacturing hopper
   + 5 WOLF Material Kit -> 5000 Material Kits/day
   + 5 WOLF Specialized Parts -> 1322.75 Specialized Parts/day
+  + 5 WOLF Machinery -> 1322.75 Machinery/day
   + 1 WOLF Alloys -> 384.62 Alloys/day
   + 1 WOLF Electronics -> 793.65 Electronics/day
   + 1 WOLF Prototypes -> 793.65 Prototypes/day
@@ -101,8 +103,9 @@ In terms of hopper output, this means that to maintain production at the appropr
 + 15 Alloys hoppers (6000/day)
 + 1 Robotics hopper (600/day)
 + 1 Electronics hopper (793/day)
++ 1 Prototypes hopper (793/day)
 
-The strategy we'll apply in this walkhrough is to produce Robotics and Alloys at one location and ship them to shipyards around the Kerbol System, while Material Kits need to be produced very close to the point of consumption, for example being connected to the Shipyard itself. We'll produce Specialised Parts and Synthetics at the shipyard too, and just deal with always having a surplus.
+The strategy we'll apply in this walkhrough is to produce Robotics and Electronics at one location and ship them to shipyards around the Kerbol System, while Material Kits need to be produced very close to the point of consumption, for example being connected to the Shipyard itself. We'll produce Specialised Parts, Alloys and Synthetics at the shipyard too, and just deal with always having a surplus. Prototypes can just be shipped from KSC until there's enough production in the Kerbol system to produce them locally.
 
 The broad strokes of the walkthrough strategy will thus be:
 
@@ -116,7 +119,7 @@ Total production required from Minmus will then be the minimum required to run 1
    + 2 Refined Exotics
    + 2 x (2 Exotic Minerals, 3 Rare Metals)
    + 3 Silicon
-1. Synthetics x 1
+2. Synthetics x 1
    + Exotic Minerals x 4
    + 1 Polymers
 3. Alloys x 1
@@ -148,7 +151,7 @@ This will be enough to support production up until around the point we have a th
 + 73 Synthetics
 + 2 Robotics
 
-#### Sp/Synthetics Hopper
+#### Alloys/Synthetics Hopper
 
 + 24,092 Material Kits
 + 281 Specialized Parts
@@ -156,13 +159,25 @@ This will be enough to support production up until around the point we have a th
 + 73 Synthetics
 + 10 Robotics
 
-#### LF/OX Hopper
+This also applies to the Electronics/Robotics hopper.
 
-+ 83,442 Material Kits
-+ 92 Specialized Parts
-+ 28 Alloys
+#### LF/OX + Mono Hopper
+
++ 27,844 Material Kits
++ 102 Specialized Parts
++ 31 Alloys
 + 72 Synthetics
-+ 2 Robotics
++ 10 Robotics
+
+#### Mixed Fuels Hopper
+
++ 32,196 Material Kits
++ 138 Specialized Parts
++ 45 Alloys
++ 108 Synthetics
++ 22 Robotics
++ 16 Electronics
++ 146 Prototypes
 
 #### Minmus Depot Lander
 
@@ -170,6 +185,25 @@ This will be enough to support production up until around the point we have a th
 + 74 Specialized Parts
 + 27 Synthetics
 + 1 Robotics
+
+### Budget
+
+To build the MK/Sp hopper, Alloy/Synethics hopper, Electronics/Robotics hopper we'll need:
+
++ 400 Specialised Parts
++ 200 Alloys
++ 220 Synthetics
++ 40 Robotics
+
+To add the Mixed Fuels hopper we need an extra 146 Prototypes.
+
+Note the order is important!
+
+1. MK/Sp Hopper
+2. Alloy/Synthetics Hopper
+3. Electronics/Robotics Hopper
+
+Each of the hoppers will require resources provided by the earlier ones.
 
 ## Planning A New Expansion
 
