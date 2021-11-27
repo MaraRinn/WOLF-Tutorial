@@ -11,7 +11,16 @@ Example:
 
 ### Crew Transport Pacer
 
-N/A
+01 Farside Crater Material Kits
+
++ Engineer
++ Farmer
++ Kolonist
++ Mechanic
++ Medic
++ Miner x 3
++ Scientist
++ Technician x 4
 
 ### Crew Transport Telpix
 
@@ -260,6 +269,8 @@ Start with a Minmus Heavy Lander and add the desired output: in this case a Fabr
 
 ## Locations
 
+### Kerbin
+
 + KSC/right next to Kerbal centre (-0.1, -74.647)
 + KSC/Shores Just north of runway (-0.04, -74.709)
 + Kerbin Shores (0.01,-74.8)
@@ -268,6 +279,24 @@ Start with a Minmus Heavy Lander and add the desired output: in this case a Fabr
 + Mountains (0.637, -78.659)
 + Desert (1.472, -86.435)
 + Ice Caps (71.386, -92.709) which needs a waypoint around (36.898, -63.906) on the way there and back to constrain the route finding
+
+### Mun
+
++ Canyons
++ East Crater
++ East Farside Crater
++ Farside Crater
++ Highland Craters
++ Highlands
++ Midland Craters
++ Midlands
++ Northern Basin
++ Northwest Crater
++ Polar Crater
++ Polar Lowlands
++ Poles
++ Southwest Crater
++ Twin Craters
 
 ## To Do
 
