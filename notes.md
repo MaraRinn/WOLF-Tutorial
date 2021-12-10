@@ -9,9 +9,12 @@ How to keep track of which crew are required for which infrastructure lander?
 
 Example:
 
-### Crew Transport Pacer
+### Crew Transport Votine
 
-01 Farside Crater Material Kits
+
+### Crew Transport TBD
+
+02 Highlands Specialized Parts
 
 + Engineer
 + Farmer
@@ -20,7 +23,12 @@ Example:
 + Medic
 + Miner x 3
 + Scientist
-+ Technician x 4
++ Technician x 3
+
+Also needs:
+
++ 9,000 Fuel
++ 11,000 Oxidizer
 
 ### Crew Transport Telpix
 
@@ -31,6 +39,16 @@ Then send a crew ship to Minmus with those specialists aboard. Build the landers
 ## Preparation
 
 Make sure that the craft can load into the stock game with only Bon Voyage and MKS/WOLF addons.
+
+### Checklists
+
+#### Lander Building
+
+1. More than 100 monopropellant on station
+2. Station has propellant required to fully load the lander
+3. Build the lander
+4. Transfer propellant
+5. Move lander to parking orbit
 
 ### Packaging
 
@@ -146,14 +164,15 @@ Note that the required production of alloys and synthetics is mostly to support 
 
 This will be enough to support production up until around the point we have a thousand Material Kits hoppers.
 
-#### Shipyard
+#### Duna Shipyard
 
-+ 100,860 Material Kits
-+ 111 Specialized Parts
-+ 22 Alloys
-+ 1 Synthetics
++ 102,137 Material Kits
++ 667 Specialized Parts
++ 195 Alloys
++ 310 Synthetics
++ 31 Robotics
 
-#### MK Hopper
+#### MK/Sp Hopper
 
 + 71,532 Material Kits
 + 85 Specialized Parts
@@ -168,7 +187,7 @@ This will be enough to support production up until around the point we have a th
 + 73 Synthetics
 + 10 Robotics
 
-This also applies to the Electronics/Robotics hopper.
+This also applies to the **Electronics/Robotics** hopper.
 
 #### LF/OX + Mono Hopper
 
@@ -179,6 +198,8 @@ This also applies to the Electronics/Robotics hopper.
 + 10 Robotics
 
 #### Mixed Fuels Hopper
+
+NB: There is no source for Xenon production so the Mixed Fuels hopper is a waste of time. For nuclear fuel, just dock a pre-fuelled reactor maintenance vehicle.
 
 + 32,196 Material Kits
 + 138 Specialized Parts
@@ -285,18 +306,23 @@ Start with a Minmus Heavy Lander and add the desired output: in this case a Fabr
 + Canyons
 + East Crater
 + East Farside Crater
-+ Farside Crater
++ Farside Crater (-0.247, -58.873) (0 14' 48", 58 53' 2")
 + Highland Craters
-+ Highlands
++ Highlands (0.372, -34.280)
 + Midland Craters
 + Midlands
 + Northern Basin
 + Northwest Crater
 + Polar Crater
-+ Polar Lowlands
++ Polar Lowlands (79.666, 108.266)
 + Poles
 + Southwest Crater
 + Twin Craters
+
+## Uraninite For Nuclear Reactor Fuel
+
++ Mun, Farside Crater 6.76% (2.943, 61.761)
++ 
 
 ## To Do
 
@@ -305,6 +331,61 @@ Start with a Minmus Heavy Lander and add the desired output: in this case a Fabr
 + Find or build a tool to build TOC from Markdown headings
 + Find or build a tool to generate table of illustrations
 + Resource conversion table listing the producer that you can get desired materials from (ie: one column for a resource, second column showing which modules have the recipe)
+
+## Construction Costs
+
+### Mun - 01 Farside Crater Material Kits
+
+Crew:
+
++ Engineer
++ Farmer
++ Kolonist
++ Mechanic
++ Medic
++ Miner x 3
++ Scientist
++ Technician x 3
+
+Materials:
+
++ 405,580 Material Kits
++ 4,050 Specialized Parts
++ 1,055 Alloys
++ 3,580 Synthetics
++ 63 Robotics
+
+Also needs:
+
++ 9,000 Fuel
++ 11,000 Oxidizer
+
+### Mun - 02 Highlands Specialized Parts
+
+Crew:
+
++ Engineer
++ Farmer
++ Kolonist
++ Mechanic
++ Medic
++ Miner x 3
++ Scientist
++ Technician x 3
+
+Materials:
+
++ 441,780 Material Kits
++ 4,428 Specialized Parts
++ 1,153 Alloys
++ 3,937 Synthetics
++ 71 Robotics
+
+Also needs:
+
++ 9,000 Fuel
++ 11,000 Oxidizer
+
 
 ## References
 
