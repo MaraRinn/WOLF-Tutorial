@@ -11,30 +11,34 @@ Example:
 
 ### Crew Transport Votine
 
-
-### Crew Transport TBD
-
-02 Highlands Specialized Parts
+10 Twin Craters Rare Metals
 
 + Engineer
-+ Farmer
-+ Kolonist
-+ Mechanic
-+ Medic
 + Miner x 3
-+ Scientist
++ Technician x 4
+
+11 East Farside Rare Metals
+
++ Engineer
++ Kolonist
++ Miner x 2
 + Technician x 3
 
-Also needs:
+### Crew Transport Pacer
 
-+ 9,000 Fuel
-+ 11,000 Oxidizer
+N/A
 
 ### Crew Transport Telpix
 
 N/A
 
-Then send a crew ship to Minmus with those specialists aboard. Build the landers as you get the materials to do so, put the crew on board and land them. Strike the ship off the list as it's connected to the biome depot.
+### Mun Route Builder 1
+
+Farside Crater & Twin Craters
+
+### Mun Route Builder 3
+
+Farside Crater & East Crater
 
 ## Preparation
 
@@ -303,11 +307,12 @@ Start with a Minmus Heavy Lander and add the desired output: in this case a Fabr
 
 ### Mun
 
-+ Canyons
++ Canyons (18.150, -50,300) (18.177, -50.448)
 + East Crater
-+ East Farside Crater
-+ Farside Crater (-0.247, -58.873) (0 14' 48", 58 53' 2")
-+ Highland Craters
++ East Farside Crater (7.109, -150.838)
++ Farside Basin (20.618, -93.351) (29 37' 5"N, 93 21' 5"W)
++ Farside Crater (-0.247, -58.873) (0 14' 48"N, 58 53' 2"E)
++ Highland Craters (64.424, 173.655) (64 25' 41"N 173 40' 3"E)
 + Highlands (0.372, -34.280)
 + Midland Craters
 + Midlands
@@ -317,12 +322,11 @@ Start with a Minmus Heavy Lander and add the desired output: in this case a Fabr
 + Polar Lowlands (79.666, 108.266)
 + Poles
 + Southwest Crater
-+ Twin Craters
++ Twin Craters (-5.916, 139.817) (5 54'56"S, 139 49' 1"E)
 
 ## Uraninite For Nuclear Reactor Fuel
 
 + Mun, Farside Crater 6.76% (2.943, 61.761)
-+ 
 
 ## To Do
 
@@ -331,60 +335,6 @@ Start with a Minmus Heavy Lander and add the desired output: in this case a Fabr
 + Find or build a tool to build TOC from Markdown headings
 + Find or build a tool to generate table of illustrations
 + Resource conversion table listing the producer that you can get desired materials from (ie: one column for a resource, second column showing which modules have the recipe)
-
-## Construction Costs
-
-### Mun - 01 Farside Crater Material Kits
-
-Crew:
-
-+ Engineer
-+ Farmer
-+ Kolonist
-+ Mechanic
-+ Medic
-+ Miner x 3
-+ Scientist
-+ Technician x 3
-
-Materials:
-
-+ 405,580 Material Kits
-+ 4,050 Specialized Parts
-+ 1,055 Alloys
-+ 3,580 Synthetics
-+ 63 Robotics
-
-Also needs:
-
-+ 9,000 Fuel
-+ 11,000 Oxidizer
-
-### Mun - 02 Highlands Specialized Parts
-
-Crew:
-
-+ Engineer
-+ Farmer
-+ Kolonist
-+ Mechanic
-+ Medic
-+ Miner x 3
-+ Scientist
-+ Technician x 3
-
-Materials:
-
-+ 441,780 Material Kits
-+ 4,428 Specialized Parts
-+ 1,153 Alloys
-+ 3,937 Synthetics
-+ 71 Robotics
-
-Also needs:
-
-+ 9,000 Fuel
-+ 11,000 Oxidizer
 
 
 ## References
