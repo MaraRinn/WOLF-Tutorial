@@ -292,6 +292,27 @@ Start with a Minmus Heavy Lander and add the desired output: in this case a Fabr
 
 ## Screenshots required
 
+## Biomes
+
+### Mun
+
++ Canyons
++ East Crater
++ East Farside Crater
++ Farside Basin
++ Farside Crater
++ Highland Craters
++ Highlands
++ Lowlands
++ Midland Craters
++ Midlands
++ Northern Basin
++ Northwest Crater
++ Polar Crater
++ Poles
++ Southwest Crater
++ Twin Craters
+
 ## Locations
 
 ### Kerbin
