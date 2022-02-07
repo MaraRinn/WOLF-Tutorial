@@ -11,18 +11,7 @@ Example:
 
 ### Crew Transport Votine
 
-10 Twin Craters Rare Metals
-
-+ Engineer
-+ Miner x 3
-+ Technician x 4
-
-11 East Farside Rare Metals
-
-+ Engineer
-+ Kolonist
-+ Miner x 2
-+ Technician x 3
+N/A
 
 ### Crew Transport Pacer
 
@@ -34,11 +23,17 @@ N/A
 
 ### Mun Route Builder 1
 
-Farside Crater & Twin Craters
++ Canyons
++ East Farside Crater
 
 ### Mun Route Builder 3
 
-Farside Crater & East Crater
++ Northwest Crater
++ Farside Basin
+
+### Twiki
+
+Northwest Crater (find a landing location)
 
 ## Preparation
 
@@ -136,82 +131,92 @@ In terms of hopper output, this means that to maintain production at the appropr
 + 1 Electronics hopper (793/day)
 + 1 Prototypes hopper (793/day)
 
-The strategy we'll apply in this walkhrough is to produce Robotics and Electronics at one location and ship them to shipyards around the Kerbol System, while Material Kits need to be produced very close to the point of consumption, for example being connected to the Shipyard itself. We'll produce Specialised Parts, Alloys and Synthetics at the shipyard too, and just deal with always having a surplus. Prototypes can just be shipped from KSC until there's enough production in the Kerbol system to produce them locally.
+The strategy we'll apply in this walkhrough is to produce as many resources as we can from the Kerbin/Mun/Minmus system and export small quantities of everything to each other world while setting up local production. Prototypes are super-expensive to produce so they will just be shipped from KSC until there's enough production in the Kerbol system to produce them through WOLF. We barely use any Prototypes through the course of this walkthrough.
+
+So for this walkthrough the aim with each ship yard is to have (all 3.75m components):
+
++ 4 Material Kits hoppers (20,000/day)
++ 1 Specialized Parts hopper (1323/day)
++ 1 Alloys hopper (385/day)
++ 1 Electronics hopper (793/day)
++ 1 Robotics hopper (600/day)
++ 1 Synthetics hopper (1500/day)
+
+Along with those will be 4 Lf/Ox hoppers and 1 Monopropellant hopper to provide us the propellants we need for the craft we'll be building.
 
 The broad strokes of the walkthrough strategy will thus be:
 
-+ Establish Material Kits production
++ Establish Material Kits, Fuel, Food, Water, Oxygen production on Kerbin
++ Establish an orbital shipyard around Kerbin
++ Send a new shipyard to Minmus
 + Buy the specialized parts and advanced materials required to build Minmus Infrastructure
-+ Develop Minmus Infrastructure to produce 5 WOLF Specialized parts and 1 each of the advanced materials
++ Develop Minmus Infrastructure to produce 10 WOLF Material Kits, 5 WOLF Specialized parts, and 1 each of the advanced materials to support local production
++ Further develop Minmus to export some useful resources
++ Repeat the expansion with Mun starting with a ship yard, then deploying depots to bring advanced materials production up to speed for self-sufficiency
++ Repeat that expansion with Duna
 
-Total production required from Minmus will then be the minimum required to run 1 3.75m hopper of each building material:
+Total production required from Minmus will then be the minimum required to run 1 3.75m hopper of each building material (but not Prototypes):
 
-1. Specialized Parts x 5
-   + 2 Refined Exotics
-   + 2 x (2 Exotic Minerals, 3 Rare Metals)
-   + 3 Silicon
-2. Synthetics x 1
-   + Exotic Minerals x 4
-   + 1 Polymers
-3. Alloys x 1
-   + 4 Rare Metals
-4. Robotics x 1
-   + 5 Alloys
-5. Electronics x 1
-   + 5 Synthetics
-6. Prototypes x 1
-   + 5 Robotics
-   + 5 Electronics
-   + 5 Specialized Parts
+1. Material Kits x 25 (15 + 5 + 5)
+   + Chemicals x 25 (1 x 25)
+   + Metals x 50 (2 x 25)
+   + Polymers x 50 (2 x 25)
+2. Specialized Parts x 5
+   + Refined Exotics x 10 (2 x 5)
+     + Exotic Minerals x 20 (2 x 2 x 5)
+     + Rare Metals x 30 (3 x 2 x 5)
+   + Silicon x 15 (3 x 5)
+3. Alloys x 6 (1 + 5)
+   + Metals x 6 (1 x 6)
+   + Rare Metals x 24 (4 x 6)
+4. Electronics x 1
+   + Material Kits x 5
+   + Synthetics x 5
+5. Robotics x 1
+   + Alloys x 5
+   + Material Kits x 5
+6. Synthetics x 6 (1 + 5)
+   + Exotic Minerals x 24 (4 x 6)
+   + Polymers x 6 (1 x 6)
 
-Note that the required production of alloys and synthetics is mostly to support the Prototypes production chain.
+The sum total thus becomes:
+
++ Chemicals x 25 (only for MK)
++ Exotic Minerals x 44 (20 for SP + 24 for Synthetics)
++ Metals x 56 (50 for MK + 6 for Alloys)
++ Polymers x 56 (50 for MK + 6 for Synthetics)
++ Rare Metals x 54 (30 SP + 24 for Alloys)
++ Silicon x 15 (only for SP)
 
 This will be enough to support production up until around the point we have a thousand Material Kits hoppers.
 
-#### Duna Shipyard
+Note that Material Kits and Specialized Parts are also required for Colony Supplies and Machinery. Colony Supplies are required to manage passenger routes in WOLF, Machinery is only used in MKS.
 
-+ 102,137 Material Kits
-+ 667 Specialized Parts
-+ 195 Alloys
-+ 310 Synthetics
-+ 31 Robotics
+#### Expansion Shipyard
 
-#### MK/Sp Hopper
++ 123,533 Material Kits
++ 948 Specialized Parts
++ 265 Alloys
++ 533 Synthetics
++ 63 Robotics
 
-+ 71,532 Material Kits
-+ 85 Specialized Parts
-+ 73 Synthetics
-+ 2 Robotics
+Note that the Duna Shipyard comes with hoppers for Material Kits, Specialized Parts, LF/O and Monopropellant. With a small amount of extra supplies this shipyard can build the A/E/S/R hopper and then start "producing" A/E/S/R locally.
 
-#### Alloys/Synthetics Hopper
+#### A/E/R/S Hopper
 
-+ 24,092 Material Kits
-+ 281 Specialized Parts
-+ 78 Alloys
-+ 73 Synthetics
-+ 10 Robotics
++ 31722 Material Kits
++ 353 Specialised Parts
++ 94 Alloys
++ 145 Synthetics
++ 20 Robotics
 
-This also applies to the **Electronics/Robotics** hopper.
+#### Fuel Hopper
 
-#### LF/OX + Mono Hopper
-
-+ 27,844 Material Kits
-+ 102 Specialized Parts
-+ 31 Alloys
-+ 72 Synthetics
-+ 10 Robotics
-
-#### Mixed Fuels Hopper
-
-NB: There is no source for Xenon production so the Mixed Fuels hopper is a waste of time. For nuclear fuel, just dock a pre-fuelled reactor maintenance vehicle.
-
-+ 32,196 Material Kits
-+ 138 Specialized Parts
-+ 45 Alloys
-+ 108 Synthetics
-+ 22 Robotics
-+ 16 Electronics
-+ 146 Prototypes
++ 34,782 Material Kits
++ 186 Specialized Parts
++ 53 Alloys
++ 144 Synthetics
++ 20 Robotics
 
 #### Minmus Depot Lander
 
@@ -220,67 +225,62 @@ NB: There is no source for Xenon production so the Mixed Fuels hopper is a waste
 + 27 Synthetics
 + 1 Robotics
 
-### Budget
+### Minmus Budget
 
-To build the MK/Sp hopper, Alloy/Synethics hopper, Electronics/Robotics hopper we'll need:
+To build the Minmus shipyard we'll need:
 
-+ 400 Specialised Parts
-+ 200 Alloys
-+ 220 Synthetics
-+ 40 Robotics
++ Expansion Shipyard (comes with MK, Sp, propellant hoppers)
++ A/E/R/S Hopper
++ Minmus Depot Lander
++ Route Builder Rover
 
-To add the Mixed Fuels hopper we need an extra 146 Prototypes.
+On Minmus we'll need to find depots that can most easily fill the production requirements for:
 
-Note the order is important!
++ Specialized Parts
++ Synthetics
++ Alloys
++ Robotics
++ Electronics
++ and Material Kits last due to having supply from Kerbin
 
-1. MK/Sp Hopper
-2. Alloy/Synthetics Hopper
-3. Electronics/Robotics Hopper
+Depot candidates:
 
-Each of the hoppers will require resources provided by the earlier ones.
++ Flats
+  + 5 Material Kits
++ Great Flats
+  + 5 Alloys
++ Greater Flats
+  + 50 Material Kits
+  + 5 Alloys
++ Highlands
+  + 15 material Kits
+  + 1 Alloys
++ Lesser Flats
+  + 1 Alloys
++ Lowlands
+  + 30 Exotic Minerals
+  + 20 Food
+  + 60 Water from Hydrates
+  + 7 Synthetics locally if it consumes its own polymer and exotic minerals production
++ Midlands
+  + 90 Exotic Minerals
+  + 16 Fertilizer
+  + 40 Water
++ Poles
+  + 40 Exotic Minerals
+  + 40 Fertilizer
 
-## Planning A New Expansion
+With 24 Exotic Minerals to import, Greater Flats can then produce 20 Specialized Parts and 2 Synthetics.
 
-I want to produce Robotics, but robotics requires:
+So rough plan:
 
-+ 5 Alloys
-+ 5 Material Kits
-+ 2 Lab points
-+ 2 Maintenance points
-+ 2 Power points
-+ 1 engineer Crew point
-
-Each Alloys production requires:
-
-+ 4 Rare Metals
-+ 1 Metals
-+ 1 Lab point
-+ 1 Maintenance point
-+ 1 Power point
-+ 1 Scientist Crew point
-
-So to start with, where can we source 20 Rare Metals? Check all the depots to make sure we have resources directed to orbit, then check harvestable resources for unexploited deposits. The Great Flats and Greater Flats biomes have Rare Metals and Metallic Ore to spare. I'll put a rare metals extraction facility on the **Great Flats**.
-
-Start with the Fabricators to produce 5 Alloys, then add the extractors to provide the raw materials required. Now add the power, maintenance and other support modules. Then add the crew. If the crew require life support and habitation add those too, and keep going until the requirements are met.
-
-Now record the crew that are required, and save this lander -- I use a folder "WOLF Depot Landers" to help keep my ship designs organised.
-
-We have space on the crew transport, let's set up another lander.
-
-Along with the Great Flats alloys production we'll need more Material Kits.
-
-Each Material Kits fabricator requires:
-
-+ 1 Chemicals
-+ 2 Metals
-+ 2 Polymers
-+ 1 Maintenance
-+ 1 Power
-+ 1 Technician Crew point
-
-So ideally a biome which already has Metallic Ore or Substrate to exploit (ideally both), and perhaps with some Minerals to turn into Chemicals. It looks like the **Highlands** have the materials we need.
-
-Start with a Minmus Heavy Lander and add the desired output: in this case a Fabricator set to produce Material Kits. Now add the extraction and processing required to take some Minerals, Metallic Ore and Substrate, and turn them into Chemicals, Metals and Polymers. Along the way you'll need more power and maintenance. Then add the crew and you'll find you need more habitation and life support, and so forth. Eventually you'll reach the limit for the lander frame (36 WOLF modules), at which point keep a note of any surplus production (in my case, there's capacity for 2 more Material Kits fabricators).
++ Greater Flats for Alloys, some Material Kits
++ Lowlands for Food, Water, 1 Synthetics, Exotic Minerals
++ Midlands for Exotic Minerals, Food, Water, Fertilizer
++ Poles for Exotic Minerals
++ Greater Flats for Synthetics
++ Great Flats for Alloys
++ Further depot expansion to extract remaining exotics, rares, polymers, metals
 
 ## Passengers to Orbit
 
@@ -291,27 +291,6 @@ Start with a Minmus Heavy Lander and add the desired output: in this case a Fabr
 + 4 food, 4 oxygen, 20 water
 
 ## Screenshots required
-
-## Biomes
-
-### Mun
-
-+ Canyons
-+ East Crater
-+ East Farside Crater
-+ Farside Basin
-+ Farside Crater
-+ Highland Craters
-+ Highlands
-+ Lowlands
-+ Midland Craters
-+ Midlands
-+ Northern Basin
-+ Northwest Crater
-+ Polar Crater
-+ Poles
-+ Southwest Crater
-+ Twin Craters
 
 ## Locations
 
@@ -332,18 +311,23 @@ Start with a Minmus Heavy Lander and add the desired output: in this case a Fabr
 + East Crater
 + East Farside Crater (7.109, -150.838)
 + Farside Basin (20.618, -93.351) (29 37' 5"N, 93 21' 5"W)
-+ Farside Crater (-0.247, -58.873) (0 14' 48"N, 58 53' 2"E)
++ Farside Crater (-0.247, -58.873) (0 14' 48"N, 58 53' 2"W)
 + Highland Craters (64.424, 173.655) (64 25' 41"N 173 40' 3"E)
 + Highlands (0.372, -34.280)
++ Lowlands (0.305, -0.530)
 + Midland Craters
 + Midlands
 + Northern Basin
 + Northwest Crater
-+ Polar Crater
++ Polar Crater (50 52' 4"N 36 32' 59"W)
 + Polar Lowlands (79.666, 108.266)
 + Poles
 + Southwest Crater
 + Twin Craters (-5.916, 139.817) (5 54'56"S, 139 49' 1"E)
+
+### Eve
+
++ Shallows (-55.060, 113.400 - near Western Sea)
 
 ## Uraninite For Nuclear Reactor Fuel
 
