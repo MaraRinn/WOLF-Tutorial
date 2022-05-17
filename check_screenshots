@@ -6,7 +6,7 @@ import os
 import os.path
 
 image_by_reference_matcher = re.compile(r'\!\[(?P<caption>[^\]]+)\]\[(?P<reference>[^\]]+)\]')
-reference_matcher = re.compile(r'\[(?P<reference>[^\]]+)\]: (?P<url>\S+)\s+(?P<text>[\'\"].*[\'\"])')
+reference_matcher = re.compile(r'\[(?P<reference>[^\]]+)\]: (?P<url>\S+)(\s+(?P<text>[\'\"].*[\'\"]))?')
 
 images = {}
 references = {}
@@ -58,11 +58,13 @@ for reference in references.keys():
         print(F"{url} ({reference})")
 
 print(" ")
-print("Pictures with no reference in document")
+print("Pictures with no reference in document:")
 urls = [references[reference]['url'] for reference in references.keys()]
 urls.sort()
 for picture in pictures:
     if picture in urls:
+        continue
+    if picture.endswith('.md'):
         continue
     stray_pictures.append(picture)
     print(F"{picture}")

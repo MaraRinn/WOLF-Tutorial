@@ -225,14 +225,36 @@ Note that the Duna Shipyard comes with hoppers for Material Kits, Specialized Pa
 + 27 Synthetics
 + 1 Robotics
 
+#### Route Builder Rover
+
++ 65,408 Material Kits
++ 542 Specialized Parts
++ 155 Alloys
++ 37 Synthetics
++ 3 Robotics
+
 ### Minmus Budget
 
 To build the Minmus shipyard we'll need:
 
 + Expansion Shipyard (comes with MK, Sp, propellant hoppers)
-+ A/E/R/S Hopper
-+ Minmus Depot Lander
-+ Route Builder Rover
++ Satellite Bundle (88Sp, 51A, 13S, 2R)
++ A/E/R/S Hopper (31,722MK, 353Sp, 94A, 145S, 20R)
++ Skycrane Depot Box x 8 (5570MK, 68Sp, 18A, 51S, 1R)
++ Skycrane (11,195MK, 86Sp, 30A, 5S, 1R)
++ 01 Greater Flats Alloys
++ 02 Lowlands Synthetics
++ 03 Greater Flats Material Kits
++ (5 specialized parts?)
++ (1 robotics?)
++ (1 electronics?)
+
++ 948 + 353 + (74*8) + 542 = 2435 Sp
++ 265 + 94 + 0 + 155 = 514 A
++ 63 + 20 + 8 + 3 = 94 R
++ 533 + 145 + (27 * 8) + 37 = 931 S
+
+Minmus is a pain to navigate by rover. My Route Builder Rover slides over most terrain and the USI rover wheels are broken. Thus expansion on Minmus will be by rocket.
 
 On Minmus we'll need to find depots that can most easily fill the production requirements for:
 
@@ -249,9 +271,13 @@ Depot candidates:
   + 5 Material Kits
 + Great Flats
   + 5 Alloys
+  + 70 Rare Metals
+  + 45 Silicates
+  + import substrate for Material Kits
 + Greater Flats
   + 50 Material Kits
   + 5 Alloys
+  + 30 substrate
 + Highlands
   + 15 material Kits
   + 1 Alloys
@@ -264,18 +290,20 @@ Depot candidates:
   + 7 Synthetics locally if it consumes its own polymer and exotic minerals production
 + Midlands
   + 90 Exotic Minerals
-  + 16 Fertilizer
-  + 40 Water
+  + Food
+  + Fertilizer
+  + Water
 + Poles
   + 40 Exotic Minerals
   + 40 Fertilizer
+  + import 8 substrate to make Material Kits
 
 With 24 Exotic Minerals to import, Greater Flats can then produce 20 Specialized Parts and 2 Synthetics.
 
 So rough plan:
 
 + Greater Flats for Alloys, some Material Kits
-+ Lowlands for Food, Water, 1 Synthetics, Exotic Minerals
++ Lowlands for Food, Water, 1 Synthetics for Minmus Station, Exotic Minerals
 + Midlands for Exotic Minerals, Food, Water, Fertilizer
 + Poles for Exotic Minerals
 + Greater Flats for Synthetics
@@ -298,12 +326,28 @@ So rough plan:
 
 + KSC/right next to Kerbal centre (-0.1, -74.647)
 + KSC/Shores Just north of runway (-0.04, -74.709)
-+ Kerbin Shores (0.01,-74.8)
 + Grasslands (0.0 -75.38)
 + Highlands (1.741, -77.339)
 + Mountains (0.637, -78.659)
 + Desert (1.472, -86.435)
 + Ice Caps (71.386, -92.709) which needs a waypoint around (36.898, -63.906) on the way there and back to constrain the route finding
+
+### Minmus
+
++ Poles (78.045, 164.276)
++ Lowlands (0.026, -51.516)
++ Midlands (4.390, -86.594 -- flat plateau)
++ Highlands
++ Slopes
++ Flats (-22.535, 171.826)
++ Lesser Flats (9.404, -178.003)
++ Great Flats (-10, -92)
++ Greater Flats
+
+Satellites:
+
++ Synchronous orbit: 357940.87 (40400s)
++ Deployer apoapsis: 534657.74 ()
 
 ### Mun
 

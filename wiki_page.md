@@ -11,14 +11,33 @@
   - [WOLF Infrastructure Expansion](#wolf-infrastructure-expansion)
   - [Adding Production to WOLF Depots](#adding-production-to-wolf-depots)
   - [WOLF Routes](#wolf-routes)
+    - [Route Builder Rover](#route-builder-rover)
   - [WOLF Transfers](#wolf-transfers)
   - [Transport Routes and Transport Credits Costs](#transport-routes-and-transport-credits-costs)
     - [Quick and Dirty Transport Credit Example Flights](#quick-and-dirty-transport-credit-example-flights)
     - [Transport Module for Transport Credits](#transport-module-for-transport-credits)
     - [How To Avoid Transport Credit Costs of Propellant-Consuming Vehicles](#how-to-avoid-transport-credit-costs-of-propellant-consuming-vehicles)
   - [Bootstrapping Kerbin Orbit WOLF Infrastructure](#bootstrapping-kerbin-orbit-wolf-infrastructure)
+  - [Commission Kerbin Shipyard](#commission-kerbin-shipyard)
   - [Extracting Resources from WOLF to MKS](#extracting-resources-from-wolf-to-mks)
   - [Establishing the Kerbin Shipyard](#establishing-the-kerbin-shipyard)
+- [Minmus Shipyard](#minmus-shipyard)
+  - [Minmus Expansion Shipyard](#minmus-expansion-shipyard)
+  - [Minmus Expansion](#minmus-expansion)
+    - [Minmus Skycrane](#minmus-skycrane)
+    - [Crew Transport Preparation](#crew-transport-preparation)
+    - [Minmus Route Preparation](#minmus-route-preparation)
+    - [01 Midlands Exotic Minerals](#01-midlands-exotic-minerals)
+    - [02 Greater Flats Synthetics](#02-greater-flats-synthetics)
+    - [03 X Electronics](#03-x-electronics)
+    - [04 X Robotics](#04-x-robotics)
+    - [05 Minmus Orbit Colony Supplies](#05-minmus-orbit-colony-supplies)
+    - [Maximising Minmus Production](#maximising-minmus-production)
+  - [Passenger Transport](#passenger-transport)
+    - [Passengers from KSC to Kerbin Orbit](#passengers-from-ksc-to-kerbin-orbit)
+    - [Passengers from Kerbin Orbit to Minmus Orbit](#passengers-from-kerbin-orbit-to-minmus-orbit)
+    - [Transfer Passengers to Depot Expansion](#transfer-passengers-to-depot-expansion)
+  - [Mun Expansion](#mun-expansion)
 - [WOLF Walkthrough Conclusion](#wolf-walkthrough-conclusion)
 
 ## Goals
@@ -66,7 +85,7 @@ Before you start a new KSP game, you'll need to install the Umbra Space Industri
 2. Open that USI archive and copy all the things inside the GameData folder into the KSP GameData folder
 3. Also download [Community Resource Pack][CRPRELEASES] - you'll need this for resources to actually be available. Download "Unstable Release 112.0.1-bleeding-edge.1" or "CRP 1.4.2". The "bleeding-edge.2" version is missing all the resource definition files
 4. As with the USI collection, open the archive, then move the CommunityResourcePack folder from the GameData folder in the archive to the KSP GameData folder (overwriting the CommunityResourcePack that came with USI)
-5. I recommend you install the [Bon Voyage][BonVoyageAddon] addon, it will be very useful for managing rovers later (it will save you hours of driving rovers around)
+5. I recommend you install the [Bon Voyage][BonVoyageAddon] addon, it will be very useful for managing rovers later (it will save you hours of driving rovers around, crashing them, and having to reload a save game)
 
 As for where to find the KSP GameData folder, it depends on your platform, and how you installed KSP. Check out the [KSP Wiki page on where to find the "root" directory][KSPROOTDIR] -- the GameData folder is inside that "root" directory (it's not actually called "root" that's just another name for the "top level" directory, which is likely called "Kerbal Space Program").
 
@@ -151,7 +170,7 @@ In the harvestable resource section of the planner you'll see that the harvester
 
 Food is produced by an agricultural module or bioreactor module. Add a **WOLF Agriculture Module** and set it up to use the _Farm_ recipe. This has now added a demand for a farmer, dirt and fertiliser. Add a farmer to your crew, then you'll need three **WOLF MHU-550 Bulk Harvester** modules to get the dirt you need. To get fertiliser, we'll add a **WOLF MHU-559 Bulk Harvester** to harvest _gypsum_, then add two **WOLF Extractor Module** set to convert the _gypsum_ to _fertiliser_ (technically you only need one to feed the farm, but the harvester can feed two extractors). The two extractor modules have added a deficit for _Lab_ resource which is supplied by a **WOLF Science Module** so add one of those onto your growing pile of infrastructure, then add the scientist and medic crew that are needed for the science module.
 
-Finally, add the harvesters and refineries required for the chemicals (feed stock is minerals), metals (feed stock is metallic ore) and polymers (feed stock is substrates). These modules have added demand for a _Miner_ crew member so recruit one of those and add them to the crew module. To finish off this infrastructure install add another **WOLF Power Module**, and you should no longer have any deficits in the _Planner_. **Note** that some of the _Material Kits_ produced by this infrastructure have immediately been consumed by other parts of the infrastructure (the habitation, life support and maintenance modules each consume 1 *Material Kits* abundance). From the 5 _Material Kits_ produced by the fabricator, 3 have been consume by the depot infrastructure leaving 2 for use elsewhere.
+Finally, add the harvesters and refineries required for the chemicals (feed stock is minerals), metals (feed stock is metallic ore) and polymers (feed stock is substrates). These modules have added demand for a _Miner_ crew member so recruit one of those and add them to the crew module. To finish off this infrastructure install add another **WOLF Power Module**, and you should no longer have any deficits in the _Planner_. **Note** that some of the _Material Kits_ produced by this infrastructure have immediately been consumed by other parts of the infrastructure (the habitation, life support and maintenance modules each consume 1 _Material Kits_ abundance). From the 5 _Material Kits_ produced by the fabricator, 3 have been consume by the depot infrastructure leaving 2 for use elsewhere.
 
 Before we can deploy this infrastructure we need to establish the depot itself. To do this, add a decoupler and a **WOLF Depot Module** with a probe core. Note that this depot module, probe core and decoupler combination is going to be used so often that I prepared a subassembly for it -- check Subassemblies for _Depot on Decoupler_. When you launch this craft you'll decouple the depot, which needs control in order to be useful.
 
@@ -159,7 +178,7 @@ What a beautiful creation! Did yours turn out like mine?
 
 ![SPH scene showing WOLF infrastructure required to support creation of 2 Material Kits abundance][SPHSCENE2MATKITS]
 
-If you're familiar with the production chains from MKS you'll see that this WOLF infrastructure is a lot simpler than what is required in MKS, for example each **WOLF MHU-550 Bulk Harvester** is roughly equivalent to a mining ship with a logistics hub attached to the planetary warehouse -- each of those mining ships will be a dozen parts given the need for drills, ore tanks, radiators, power source, probe core and whatever else you normally put on your mining ships. That part count can severely bulk out your save file size, and slow your game to a crawl any time you load a production facility into physics range. WOLF removes all that complexity from the save file and physics simulation (including the need to visit facilities every so often to update the resource processing chains).
+If you're familiar with the production chains from MKS you'll see that this WOLF infrastructure is a lot simpler than what is required in MKS, for example each **WOLF MHU-550 Bulk Harvester** is roughly equivalent to a mining ship with a logistics hub attached to the planetary warehouse -- each of those mining ships will be a dozen parts given the need for drills, ore tanks, radiators, power source, probe core and whatever else you normally put on your mining ships. That part count can severely bulk out your save file size, and slow your game to a crawl any time you load a production facility into physics range. WOLF removes all that complexity from the save file and physics simulation -- including the need to visit facilities every so often to update the resource processing chains.
 
 ## Establish KSC Depot
 
@@ -173,13 +192,7 @@ Now that you have your two-component craft separated (the WOLF Depot Module and 
 
 Just select the _Establish Depot_ action for the WOLF Depot Module, and the craft will disappear. It belongs to WOLF now.
 
-Check out the Depots pane of the WOLF Dashboard now:
-
-![WOLF Dashboard showing the new KSC Biome Depot with bonus resources awarded to Kerbin-based depots][WOLFDASHKERBINDEPOTBONUS]
-
 That depot has given us 1 Food, 1 Oxygen, 5 Material Kits, 5 Water, and 10 Power. This will significantly reduce the amount of infrastructure we need to get started — but remember that these bonus resources only apply to WOLF biomes on Kerbin.
-
-Switch to the remaining craft (by default '[' or ']' will cycle active vessels) and select the _Connect to depot_ action for one of the WOLF modules. With that done, open the **WOLF Dashboard** and check the _Depots_ pane.
 
 ![Runway scene with WOLF Dashboard showing new production added][RUNWAYWOLFDASHNEWKSCDEPOTPRODUCTION]
 
@@ -239,10 +252,17 @@ Remember the basic process for establishing a new biome depot is:
 - Use the _Establish Depot_ action on the **WOLF Depot**
 - Undock the **DDR Basic Depot** assembly
 - Use the _Connect to depot_ action on the **Tutorial Basic Depot** assembly
+- Switch vessels to the rover (your previously active vessel was destroyed as part of establishing the depot)
 - Use the _Connect to Origin Depot_ action on the **WOLF Transport Computer**
 - Move the rover back to the KSC
 - Use the _Connect to Destination Depot_ action on the **WOLF Transport Computer**
 - Recover the rover
+
+![Use the connect to origin depot action on the WOLF Transport Computer before departing the remote biome][MountainsDepotDeployerConnectOriginDepot]
+
+![Use the connect to destinationi depot action on the WOLF Transport Computer after arriving at KSC][KSCDepotDeployerCoonectDestinationDepot]
+
+If you want to know what's going on with the **WOLF Transport Computer**, check out the section on **WOLF Routes**. The executive summary is that you're setting up routes between depots over which you'll later be establishing resource transfers -- routes are like railways, transfers are the trains.
 
 ## Adding Production to WOLF Depots
 
@@ -252,18 +272,23 @@ Let's start with the _Alloys_, building a _WOLF Depot Deployer Rover_ trailer fr
 
 Unfortunately, it turns out that _Rare Metals_ are not a thing in Kerbin biomes. Okay, what about the others? _Electronics_ requires _Synthetics_ which in turn requires _ExoticMinerals_ ... which it turns out are not available on Kerbin either. Maybe _Prototypes_ then? No, they require _Electronics_ which we can't manufacture in WOLF on Kerbin. _Robotics_ are in the same boat, requiring _Alloys_. Last on the list are _Specialized Parts_ but it turns out that they require _Refined Exotics_ (_Rare Metals_ and _Exotic Minerals_).
 
-The only spaceship-building things we can make on Kerbin using WOLF infrastructure are _Material Kits_ and _Fuel_. What do we do about the rest? For the boot-strapping stage, any time we need _Specialized Parts_, _Alloys_, _Electronics_, _Prototypes_, _Robotics_ or _Synthetics_ the options are to buy them (create a new craft with a resource container full of the resource we're after), set up WOLF infrastructure where we _can_ find them and transport the supplies to the shipyard, or find some surface resources to extract and perform all the industry using MKS (the shipyard is MKS infrastructure so this is perfectly acceptable).
+The only spaceship-building things we can make on Kerbin using WOLF infrastructure are _Material Kits_ and _Fuel_. What do we do about the rest? For the boot-strapping stage, any time we need _Specialized Parts_, _Alloys_, _Electronics_, _Prototypes_, _Robotics_ or _Synthetics_ the options are to buy them (create a new craft with a resource container full of the resource we're after), set up WOLF infrastructure where we _can_ find them and transport the supplies to the shipyard, or find some surface resources to extract and perform all the industry using MKS.
 
 For this walkthrough we're not going to go overboard with production, and as far as the other spaceship building materials go we'll simply buy them. Tens of abundance for _Material Kits_ and _Fuel_ will be enough to get us to Minmus where we'll find the resources that Kerbin doesn't have itself. Along the way we'll also produce _Fertilizer_, _Food_, _Oxygen_, and _Water_ to reduce the amount of infrastructure we need to establish on Minmus at the start.
 
 Clear the SPH build area and load up the **WOLF Depot Deployer Rover**, add the **DDR 5 Material Kits** subassembly, put a Miner and a Technician in the passenger cabin (as indicated in the subassembly description), and check the _Planner_ pane of the **WOLF Dashboard** to see which biome will have the most resources left over after we commit to this _Material Kit_ production. For me this is the Mountains biome which had 100 _Minerals_ abundance before this infrastructure took 10 away. Launch the rover and send it to the Mountains biome (0.637, -78.659).
 
+Here's what the **WOLF Depot Deployer Rover** with **DDR 5 material Kits** subassembly and the required crew should look when you're ready to launch:
+
+![SPH scene with DDR rover and attached DDR 5 Material Kits subassembly][SPHDDRMaterialKitsAndCrew]
+
 As is usual with the Depot Deployer Rover:
 
+- move the rover to the destination biome
 - undock the trailer and connect that to the depot
-- connect the transport computer to the origin depot
+- connect the transport computer to the "origin" depot
 - send the rover back to KSC
-- connect the transport computer to the destination depot
+- connect the transport computer to the "destination" depot
 - recover the vessel
 
 You should be able to send one of these **DDR 5 Material Kits** trailers to each of the biomes, and a second one to the _Mountains_ biome.
@@ -278,13 +303,17 @@ To recap:
 
 - DDR 5 Material Kits expansions deployed to
   - KSC
-  - Shores
-  - Grasslands
-  - Highlands
-  - Mountains
+  - Shores (-0.04, -74.9)
+  - Grasslands (0.0 -75.38)
+  - Highlands (1.741, -77.339)
+  - Mountains (0.637, -78.659) (expand to 20 material kits)
 - DDR 20 Fuel expansion deployed to Shores
 - DDR 20 Food expansion deployed to Grasslands
 - DDR Life Support expansion to Highlands
+
+Return the rovers to KSC right next to Kerbal centre (-0.1, -74.647). The extra infrastructure for the Mountains depot will require an extra maintenance module and power module -- I added these by copying the rear-most Karibou Flatbed Wheel Bay, removing the WOLF modules from it then adding the power and maintenance modules on top.
+
+If you have trouble with the rover endlessly bouncing, check out the **Route Builder Rover** section below. There is a trailer subassembly that you can use the same way as the DDR trailers, with a prebuilt subassembly for 20 fuel production (RBR 20 Fuel). The Route Builder Rover is slow, but it will get the job done until you run into issues with Kraken vs Bon Voyage.
 
 After all that effort the _Depots_ tab of your **WOLF Dashboard** should look something like this:
 
@@ -294,34 +323,49 @@ After all that effort the _Depots_ tab of your **WOLF Dashboard** should look so
 
 It's all well and good having that _Material Kits_ production chain set up in the mountains, but what do we do with the output? At present all of this work has set up _abundance_ of certain resource types in the invisible world of WOLF. Eventually you'll pull resources out of WOLF into the MKS world.
 
-The next stage from WOLF production to MKS extraction is getting those WOLF resources to orbit, where we want to use Material Kits and other resources to build spaceships. The immediate progress we need to make is pulling the resources from the WOLF depots to the KSC and then transferring them to orbit over a WOLF route.
+The next step on the way from WOLF production to MKS extraction is getting those WOLF resources to orbit, where we want to use Material Kits and other resources to build spaceships. The immediate progress we need to make is _transferring__ the resources from the WOLF depots to the KSC and then _transferring_ them to orbit over WOLF _routes_.
 
-WOLF handles transport of resources from one biome to another by way of _Routes_ which are path established for _Transfers_. You establish a route by travelling between biomes using the WOLF Transport Computer to connect origin and destination depots. This will add _Route_ between the source biome and the destination biome. You can then add resources to *Transfers* on that route. Each transfer has a certain capacity, you'll allocate an abundance of resource to a transfer, then the abundance of that resource will be reduced in the source biome and increased in the target biome.
+WOLF handles transport of resources from one biome to another by way of _routes_ which are paths established for _transfers_ to move over -- conceptually, routes are a railway and transfers are the regular trains on that railway. You establish a route by travelling between biomes using the **WOLF Transport Computer** to connect origin and destination depots, with the capacity of the route determined by the **WOLF Cargo Kontainers** attached to the rover. Moving a rover between origin and destination depots with the transport computer tracking the trip will add _Route_ between the source biome and the destination biome with a certain _cargo space_.
 
-You already have some routes established as part of the initial deployment of WOLF depots with the WOLF Depot Deployer. To establish a *transfer* open the **WOLF Dashboard** to the _Routes_ pane. Select the _Manage Transfers_ button which will show you the _Manage Transfers_ interface:
+You already have some routes established as part of the initial deployment of WOLF depots with the WOLF Depot Deployer, here's what they look like in the _Routes_ pane of the **WOLF Dashboard**:
 
-![SPH scene with WOLF Dashboard showing the Manage Transfers interface][SPHWOLFDASHMANAGETRANSFERS]
+![SPH scene with WOLF Dashboard showing the Routes pane][SPHWOLFDASHROUTESPANE]
 
-To transfer resources simply select the resource in the top section, enter the abundance you wish to shift between depots in _Transfer Amount_ then select _Transfer_. Do that now to move 5 Material Kits from the Mountains depot to the KSC depot. Use either the drop-down menu at the tp of the _Manage Transfers_ interface or the left/right arrows either side of that drop-down to select the route that you want the transfer to use (in this case "Kerbin:Mountains => Kerbin:KSC").
+This panel is showing us that there are routes between specific origin and destination biomes that have a certain capacity in units of _Cargo Space_. You can then create _Transfers_ on that route, which we'll get to in the [WOLF Transfers](#wolf-transfers) section below.
 
-Here's what my transport routes and production look like with the depots transferring some resources to KSC:
+Note that with 20 _Fuel_ abundance we'd have to run the rover back and forth 7 times. That seems a lot like hard work so let's cobble together a rover with three of the largest WOLF payload Kontainers and call it the **WOLF Route Builder Rover**.
 
-![KSC scene with WOLF Dashboard showing transfers from highlands, mountains and shores to KSC][KSCTransfersFromHighlandsMountainsShores]
+### Route Builder Rover
 
-Note that with 20 _Fuel_ abundance I'd have to run the rover back and forth 7 times. That seems a lot like hard work so I'll slap together a rover with three of the largest WOLF payload Kontainers and call it the **WOLF Route Builder Rover**. This rover has 45 payload capacity so it'll build my fuel routes quite quickly. It also has a trailer subassembly, so if you were having trouble with the **WOLF Depot Deployer** due to the weight of the payloads it was hauling (I sometimes had problems with wheels popping or suspension bouncing) give this route builder rover a try.
+This rover has 45 payload capacity so it'll build these routes quite quickly. It also has a trailer subassembly so if you were having trouble with the **WOLF Depot Deployer** due to the weight of the payloads it was hauling (I sometimes had problems with wheels popping or suspension bouncing) give this route builder rover a try.
 
 ![SPH scene with WOLF Route Builder Rover][SPHRouteBuilderRover]
 
-Take that rover out to each of the depots to build a route to KSC, that should keep you covered for the entire walkthrough. The procedure for building these routes with the tutorial rovers is:
+<!--
+Label this image with:
 
-- Launch the rover on its own
+1. Nuclear reactor and radiator (AG0)
+2. Descent and flight core (AG9)
+3. Surface operations core (AG8)
+4. Surface Scanning Module
+5. Bon Voyage controller
+6. WOLF Transport Computer
+
+-->
+
+I put the light mast on top to light up the terrain so that the rover is usable at night (especially useful on Mun where night time lasts 3d), and it helps when landing other spacecraft nearby. The mast has two lights to illuminate the rover itself so you can see the controls at night. It also has landing rockets so you can build this rover in orbit and land it on Minmus, Mun, Duna or Ike (but more about all that later). This rover can not land on Kerbin or Eve without assistance.
+
+Take this **WOLF Route Builder Rover** rover out to each of the biomes to build a route from KSC to the biome, then from the biome back to KSC. That should keep you covered for the entire walkthrough. The procedure for building these routes with the tutorial rovers is:
+
+- Launch the rover from the SPH
 - On the runway, lock the brakes (icon in the HUD) and start the reactor (AG0)
+- Activate the driving probe core (AG8) -- double-check that the artificial horizon shows the horizon with sky above, ground below
 - Use the _Connect to Origin Depot_ action on the **WOLF Transport Computer**
 - Move the rover to the remote biome
-- Use the _Connect to Destination Depot_ action on the **WOLF Transport Computer**
-- Use the _Connect to Origin Depot_ action on the **WOLF Transport Computer**
+- Use the _Connect to Destination Depot_ action on the **WOLF Transport Computer** to complete this route
+- Use the _Connect to Origin Depot_ action on the **WOLF Transport Computer** to start a new route
 - Move the rover back to the KSC
-- Use the _Connect to Destination Depot_ action on the **WOLF Transport Computer**
+- Use the _Connect to Destination Depot_ action on the **WOLF Transport Computer** to complete that route
 - Repeat this process as often as you need
 
 Here's one I prepared earlier (just a bunch of routes with a decent amount of payload capacity):
@@ -332,9 +376,9 @@ Here's one I prepared earlier (just a bunch of routes with a decent amount of pa
 
 In this walkthrough the main purpose of setting up these biomes is to get Material Kits and Fuel to orbit to start building spaceships. There are no doubt untapped opportunities in your biomes (eg: the ability to send one resource from a biome with excess to another biome with a deficit), but for now we have plenty of output to get to orbit.
 
-Open the WOLF dashboard to the _Routes_ pane and open the _Manage Transfers_ dialog:
+To get the food, fuel and material kits from the various biome depots to orbit, first we need to get them to the launch site. This means setting up resource transfers over the established routes. To establish a resource transfer open the **WOLF Dashboard** to the _Routes_ pane. Select the _Manage Transfers_ button which will show you the _Manage Transfers_ interface:
 
-![Manage Transfers dialog showing resources available at source and destination][ManageTransfersDiscussion]
+![SPH scene with WOLF Dashboard showing the Manage Transfers interface][SPHWOLFDASHMANAGETRANSFERS]
 
 This dialog is use to set up resource transfers over a route. The numbers visible in this dialog show:
 
@@ -346,35 +390,63 @@ This dialog is use to set up resource transfers over a route. The numbers visibl
 - How much payload capacity is left for transfers
 - How much payload capacity has already been used
 
-How much of a resource you can add to transfers on this route is the smaller number of the abundance of the resource or the available payload. In the example above there are 20 Material Kit points available, and the payload has space for all of them with room to spare.
+How much of a resource you can add to transfers on this route is the smaller number of the abundance of the resource or the available payload. In the example above there are 20 Material Kit points available, and the payload of 45 has space for all of them with room to spare.
 
-Click the downward pointing triangle next to _Material Kits_ in the available resources list.
+When you request a new transfer you'll allocate an _abundance_ of resource to a transfer, then the _abundance_ of that resource will be reduced in the source biome and increased in the target biome, and the route will have a new _Transfer_ using up some of its capacity.
 
-If you have more Material Kit abundance than will fit in the payload, you can simply connect the route more times with your route-building vehicles to increase the payload size.
+To transfer resources select the resource in the top pane, enter the abundance you wish to shift between depots in _Transfer Amount_ then select _Transfer_. Do that now to move 5 Material Kits from the Mountains depot to the KSC depot:
+
+1. Open the **WOLF Dashboard** to the _Routes_ pane
+2. Click _Manage Transfers_  to open the _Transfer Resources_ interface from the _Routes_ pane of the **WOLF Dashboard**
+3. Select "Kerbin:Mountains => Kerbin:KSC" from the dropdown at the top (the left/right arrows will help when your list is too long to fit on the screen)
+4. In the list of resources, select the down-pointing triangle next to _MaterialKits_
+5. Set _Transfer Amount_ to 6
+6. Click _Transfer_
+7. You should see the lower pane update with the new transfer of 6 _MaterialKits_ over this route
+8. _Close_ the _Transfer Resources_ window
+
+Here's the _Transfer Resources_ window with the new transfer set up over the Mountains to KSC route:
+
+![KSC scene with Transfer Resources interface showing a new transfer of 6 MaterialKits from Mountains to KSC][KSCTransferMaterialKitsMountainsToKSC]
 
 Set the _Transfer Amount_ to 1, then click _Transfer_. You should notice:
 
 - The "Origin" abundance will drop by 1
 - The "Destination" abundance will increase by 1
-- The "Available Payload" will drop by 1/1 (eg from 7/10 to 8/11)
+- The "Available Payload" will drop by 1
 
-You'll see a new row in the bottom table displaying the transfer you've just organised. Add another transfer of 5 Material Kits, and you'll see the details in the Resource/Origin/Destination values and the row in the bottom table updated to show the new payload contents.
+You'll see a new row in the bottom table displaying the transfer you've just organised. Add another transfer of 5 _Material Kits_, and you'll see the row in the bottom table updated to show the new _Material Kits_ quantity.
+
+Now click the "X" next to that 6 Material Kits transfer in the lower pane, and the abundance in the source depot will be restored along with the available payload.
+
+Now set up the Material Kits transfer to move:
+
+- 20 Material Kits from the Mountains depot to the KSC depot
+- 20 Food from the Grasslands depot to the KSC depot
+- 20 Fuel from the Shores depot to the KSC depot
+- 20 Water from the HIghlands depot to the KSC depot
+
+Close the _Transfer Resources_ window.
 
 The _Routes_ pane of the **WOLF Dashboard** will now show the resources being transferred between the various biomes and the KSC. In my example I've set up the production, routes and transfers to provide 20 surplus _Material Kits_ and 20 surplus _Fuel_ for the KSC depot. I want to get that _abundance_ to Kerbin orbit, so it's time to talk about transport credits which should be familiar to people who have used MKS in the past, and then we can talk about how to get _abundance_ out of the WOLF system and turn it into materials for MKS activities.
 
-Go ahead and get all the surplus _Material Kits_ and _Fuel_ abundance on transfers to KSC:
+Here's what my transport routes look like with the depots transferring some resources to KSC:
 
-![WOLF Dashboard open to the Routes pane displaying the various transfers that have been arranged over the established routes]()
+![KSC scene with WOLF Dashboard showing transfers from highlands, mountains and shores to KSC][KSCTransfersFromHighlandsMountainsShores]
+
+If you have more Material Kit, fuel, water and food abundance than will fit in the payload, you can simply connect the route more times with your route-building vehicles to increase the payload size.
+
+The small portions of abundance that we have produced and transferred will be adequate for the rest of the walkthrough. Feel free to expand your depots by adding more production modules, adding more payload capacity to the routes using the route builder rover, and transferring the extra abundance to KSC.
 
 ## Transport Routes and Transport Credits Costs
 
-Up till now we've kept the transport routes simple by only connecting biomes that can be reached without expending mass. It's time to kick it up a notch and learn about Transport Credits, which is an abstraction of the process of building launch vehicles, fuelling them and launching payloads to orbit (or deorbiting payloads to bring them to the surface).
+Up till now we've kept the transport routes simple by only connecting biomes that can be reached with electric rovers. It's time to kick it up a notch and learn about Transport Credits, which is an abstraction of the process of building launch vehicles, fuelling them and launching payloads to orbit (or deorbiting payloads to bring them to the surface). Transport Credits also represent an abstraction of building and fuelling tugs and freighters that operate between worlds -- basically any transfer that involves the consumption of stuff (rocket stages, propellant, etc) is abstracted to Transport Credits.
 
-The first thing we'll do here is a few test flights to understand how many _Transport Credits_ we'll need for sending supplies to orbit (or roughly, how Transport Credits correlate to delta-v and ship size). Let's start with a "small" rocket, a medium sized rocket, a 3t payload SSTO spaceplane, and a 55t payload SSTO spaceplane. Note that with enough Transport Credits each flight will add a certain payload capacity to the available routes from KSC to Kerbin Orbit, with the payload capacity being proportional to the payload capacity of each launch vehicle. We'll get the gory details soon!
-
-**Save your game here**, give it a name like "Before Transport Credits". Skip ahead to the next section (_Extracting Resources from WOLF to MKS_) if you don't want to learn about transport costs and how to avoid them. You're going to be restoring to this point after experimenting with _Transport Credits_, and through the rest of the walkthrough there will be no transport costs other than time.
+The first thing we'll do here is a few test flights to understand how many _Transport Credits_ we'll need for sending supplies to orbit (or roughly, how Transport Credits correlate to delta-v and ship size), and then we'll have a look at an optimisation that will reduce Transport Credit cost to 0. Let's start with a small rocket, a medium sized rocket, a 3t payload SSTO spaceplane, and a 55t payload SSTO spaceplane. With enough Transport Credits each flight will add a certain payload capacity to the available routes from KSC to Kerbin Orbit, with the payload capacity being determined by the _WOLF Cargo Kontainers_ on each launch vehicle. We'll get the gory details soon!
 
 ### Quick and Dirty Transport Credit Example Flights
+
+**Save your game here**, give it a name like "Before Transport Credits". Skip ahead to the next section (_Extracting Resources from WOLF to MKS_) if you don't want to learn about transport costs and how to avoid them. You're going to be restoring to this point after experimenting with _Transport Credits_, and through the rest of the walkthrough there will be no transport costs other than the time it takes to set them up.
 
 In the VAB, put together a rocket that can carry a single 3t **2.5m WOLF Cargo Kontainer** to orbit using 2.5m parts. The *_WOLF Tutorial 2.5m SSTO_ contains:
 
@@ -385,11 +457,15 @@ In the VAB, put together a rocket that can carry a single 3t **2.5m WOLF Cargo K
 - RE-I5 "Skipper" Liquid Fuel Engine
 - WOLF Transport Computer
 
-Send that to the launch pad, select the _Connect to Origin Depot_ action on the **WOLF Transport Computer**, and launch the rocket to a 80km orbit. Once in orbit, check the "Route cost" reported by the **WOLF Transport Computer**.
+Send that to the launch pad, select the _Connect to Origin Depot_ action on the **WOLF Transport Computer**, and launch the rocket to a 80km orbit.
 
-If you try to use the **Connect to Destination Depot** action, you should get an error message about needing more Transport Credits to complete that operation. Revert to launch, and run it a few times just to see that the "Route cost" is predictable. My flights came up with a route cost of around 30 _Transport Credits_ which works out to a _Transport Credits Per Unit_ cost of around 10.
+![Connect the WOLF Transport Computer to the origin depot before launch][SmallSSTORocketStartRouteAtLaunch]
 
-![Sample flight of 2.5m rocket showing a route cost of 30](https://i.imgur.com/Iq5PW4k.jpg)
+Once in orbit, check the "Route cost" reported by the **WOLF Transport Computer**.
+
+If you try to use the **Connect to Destination Depot** action, you should get an error message about needing more Transport Credits to complete that operation. Revert to launch, and run it a few times just to see that the "Route cost" is predictable. My flights came up with a route cost of 30 _Transport Credits_ which works out to a _Credits/Payload_ cost of 10.
+
+![Sample flight of 2.5m rocket showing a route cost of 30][SmallSSTORocketRouteCost30]
 
 Revert to vehicle assembly and do the same thing with a 3.75m rocket. The _WOLF Tutorial 3.75m SSTO_ is roughly:
 
@@ -401,18 +477,18 @@ Revert to vehicle assembly and do the same thing with a 3.75m rocket. The _WOLF 
 - Kerbodyne S3-14400 Tank
 - S3 KS-24x4 "Mammoth" Liquid Fuel Engine
 
-![Sample flight of 3.75m rocket showing a route cost of 85]()
+Send that to the launch pad, select the "connect to origin depot" on the WOLF Transport Computer, and launch the rocket to an 80km orbit. As before, check the "route cost", revert to launch and run the process again to show that the "route cost" is predictable. My flights came up with a route cost of 80-ish, giving a _Transport Credit Per Unit_ cost of around 6. Revert to vehicle assembly when done.
 
-Send that to the launch pad, select the "connect to origin depot" on the WOLF Transport Computer, and launch the rocket to an 80km orbit. As before, check the "route cost", revert to launch and run the process again to show that the "route cost" is predictable. My flights came up with a route cost of 86, giving a _Transport Credit Per Unit_ cost of around 6.14. Revert to vehicle assembly when done.
+![Sample flight of 3.75m rocket showing a route cost of over 80][KERB375ROCKETCREDITS]
 
-Now do the same thing with spaceplanes. The two I use are the **WOLF SSTO** and the [ES-96 Python by Juggernoob](https://steamcommunity.com/sharedfiles/filedetails/?id=1722161481) which I find to be an aesthetically pleasing and easy-to-fly SSTO spaceplanes.
+Now do the same thing with spaceplanes. The two I use are the **WOLF SSTO** and the [ES-96 Python by Juggernoob](https://steamcommunity.com/sharedfiles/filedetails/?id=1722161481) which I find to be aesthetically pleasing and easy-to-fly SSTO spaceplanes.
 
 **Instructions:** for both these spaceplanes the procedure to get to orbit is:
 
 - set throttle to maximum
 - turn SAS on to stability assist
 - stage once to light the engines
-- rotate off the runway to 10 degrees at about 140m/s
+- rotate off the runway to 10 degrees at about 140m/s and immediately retract landing gear
 - hold the nose at 10 degrees for the whole flight through the atmosphere
 - when the airbreathing mode is insufficient to keep accelerating, switch to closed cycle (Action Group 1)
 - push the apoapsis to 80km and cut the throttle
@@ -423,15 +499,15 @@ My flights with **WOLF SSTO** ended up producing routes with a cost of 9 for 3t 
 
 ![Sample flight of WOLF SSTO showing route cost of 8 for 3t cargo][SSTORTCOST8]
 
-The **ES-96 Python** got to orbit in the order of 90 Credits for 42t. The **WOLF ES-96 Python** in the tutorial ships package has already been modified and will automatically start the transport route when you stage to launch (the **Transport Computer** is in the cargo bay with the _Connect to origin depot_ action linked to the _stage_ action group).
+The **ES-96 Python** got to orbit in the order of 80 to 90 Credits for 42t. The **WOLF ES-96 Python** in the tutorial ships package has already been modified and will automatically start the transport route when you stage to launch (the **Transport Computer** is in the cargo bay with the _Connect to origin depot_ action linked to the _stage_ action group).
 
-![Sample flight of WOLF ES-96 PYTHON showing route cost of 85 for 42t][ES96RTCOST85]
+![Sample flight of WOLF ES-96 PYTHON showing route cost of over 80 for 42t][ES96RTCOST85]
 
 ### Transport Module for Transport Credits
 
 How do we produce Transport Credits? The short version is that _Transport Credits_ are produced by the _WOLF Transport Module_. By now you should be familiar with the drill: start assembling a new WOLF infrastructure component with the WOLF Dashboard open to the Planning pane, beginning with the WOLF Transport Module. Fuel is produced by the Fuel(Ore) or Fuel(H2O) recipes in the WOLF Refinery Module — each recipe will take 5 points of input availability and provide 2 points of Fuel availability. As usual one harvester will provide sufficient Ore or Water for two refineries.
 
-The "atomic" component of a Transport Credit production line is 1 Transport Module (producing 10 _Transport Credits_ from 10 _Fuel_), 3 MHU-500 harvesters (_Water_), and 6 Refinery Modules (producing 2 *Fuel* from 5 *Water*) this needs to be supplemented with 1 abundance of _Material Kits_. To produce the target of 100 Transport Credits to get our *Fuel* and *Material Kits* to orbit we need to start off with:
+The "atomic" component of a Transport Credit production line is 1 Transport Module (producing 10 _Transport Credits_ from 10 _Fuel_), 3 MHU-500 harvesters (_Water_), and 6 Refinery Modules (producing 2 _Fuel_ from 5 _Water_) this needs to be supplemented with 1 abundance of _Material Kits_. To produce the target of 100 Transport Credits to get our *Fuel* and _Material Kits_ to orbit we need to start off with:
 
 - 10 x WOLF Transport Module
 - 30 x MHU-500 harvesters (harvesting water)
@@ -440,9 +516,9 @@ The "atomic" component of a Transport Credit production line is 1 Transport Modu
 
 Then you add all the habitation, power, maintenance and other infrastructure required to support this.
 
-![VAB showing the ridiculous WOLF infrastructure required to produce 100 transport credits]()
+![VAB showing the ridiculous WOLF infrastructure required to produce 100 transport credits][VABWOLFTutorial100TransportCredits]
 
-One catch with _Transport Credits_ is that you can't deliver them elsewhere: they can only support the establishment of routes from the biome which they're produced in. Thus to use *Transport Credits* to fund transfers from KSC to Kerbin Orbit, you need to deploy this infrastructure at KSC.
+One catch with _Transport Credits_ is that you can't deliver them elsewhere: they can only support the establishment of routes from the biome which they're produced in. Thus to use _Transport Credits_ to fund transfers from KSC to Kerbin Orbit, you need to deploy this infrastructure at KSC.
 
 ### How To Avoid Transport Credit Costs of Propellant-Consuming Vehicles
 
@@ -452,13 +528,9 @@ How? Put a propellant depot in orbit, fly your transport vehicle to that depot a
 
 Here's the **WOLF SSTO** at the end of a 3t haul to orbit having just refuelled. How many transport credits to fly 3t to orbit? 0. Let's make this work for you!
 
-![WOLF SSTO in Kerbin orbit with Kerbin Shipyard in background and WOLF Transport Computer action window showing route cost 0 and route payload 3]()
+![WOLF SSTO in Kerbin orbit with Kerbin Shipyard in background and WOLF Transport Computer action window showing route cost 0 and route payload 3][WOLFSSTO0CREDITS]
 
- Another hint for setting up zero-cost routes: you only need the propellant in the vehicle at the time that you complete the route. After that you can take all the propellant back out except for what's absolutely necessary to land back at KSC. All you are doing here is showing the WOLF Transport Computer that you have infrastructure available to support refuelling, and you're not using expendable rockets.
-
- You can also start the next route before putting propellant in your spacecraft. This means you start the mission with surplus mass and don't have to put as much propellant back into the spacecraft before you send it on its way.
-
-Go back and load your "Before Transport Credits" save game.
+**Go back and load your "Before Transport Credits" save game**.
 
 ## Bootstrapping Kerbin Orbit WOLF Infrastructure
 
@@ -466,48 +538,89 @@ Load the **WOLF Shipyard Launcher** that you'll find in the VAB from the tutoria
 
 Now to expand on this shipyard to provide a propellant supply and the ability to construct spacecraft for the expansion to Minmus and Mun. To start with, let's add a propellant supply to the shipyard. To accomplish this:
 
+- supply the 4000 Material Kits required to deploy the shipyard
 - supply the MKS resources (other than Material Kits) required to build the _Fuel Hopper_ shipyard component
-- supply the propellant required to refuel a route builder (there's a trick to avoid this)
+- supply the propellant required to refuel a route builder
 - build a route to provide WOLF MaterialKits that the shipyard
 - extract the WOLF Material Kits to MKS Material Kits that the shipyard can use (this will be the focus of the following section)
 
-The WOLF ES-96 Python will need around 15,000 fuel and oxidizer to replenish at the end of its run. One option is to send up a large tanker with the required propellant, another is to have an empty tank near the launch site (the western end of the runway), empty the propellant from the Python into this tank, start the route, then fill the Python for launch. Now you can fly to orbit for 0 transport credits cost.
+The WOLF ES-96 Python will need around 15,000 fuel and oxidizer to replenish at the end of its run. One option is to send up a large tanker with the required propellant. Check out the **Shipyard Bootstrap** vessel under the **WOLF Tutorial Shipyard** folder. This will bootstrap the Kerbin Shipyard, and allow you to establish a route from KSC to Orbit:
+
+1. Launch **Shipyard Bootstrap**
+7. Rendezvous **Shipyard Bootstrap** with **Kerbin Shipyard**
+8. Transfer propellant to the shipyard
+9. Send **Shipyard Bootstrap** to a parking orbit, you can use it to top up the shipyard later
+10. Launch the **WOLF ES-96 Python**
+11. Rendezvous **WOLF ES-96 Python** with the **Kerbin Shipyard** and refuel it
+12. Establish route to orbit
+13. Transfer propellant back to the **Kerbin Shipyard** and leave the Python only enough propellant to de-orbit and fly back to KSC (about 300m/s)
+14. Return WOLF ES-96 Python to KSC (you can build a route on the way back, as long as you have a way to refuel after landing)
+
+The shipyard will also need advanced MKS materials which we are not producing yet. As you might expect, there's already a craft available to deliver the advanced construction materials that will be required. Look at the **Advanced Materials Delivery** craft, which will deliver the following in about the proportions required:
+
+- Specialized Parts
+- Alloys
+- Synthetics
+- Robotics
+- Electronics
+
+One of these will bootstrap the Kerbin shipyard, then a second will bootstrap the Minmus shipyard later. After that all the resources will be produced through WOLF infrastructure and expansion to other worlds becomes much easier. For the immediate mission:
+
+1. Launch the **Advanced Materials Delivery** rocket
+2. Rendezvous **Advanced Materials Delivery** with **Kerbin Shipyard**
+3. Transfer the resources from **Advanced Materials Delivery** to **Kerbin Shipyard**
+4. Deorbit **Advanced Materials Delivery**.
+
+With all that work taken care of, it's time to commission the shipyard!
+
+## Commission Kerbin Shipyard
+
+To commission the Kerbin Shipyard, you need to complete these tasks:
+
+1. Transfer Material Kits and Fuel from KSC depot to Kerbin Orbit depot
+2. Connect the Material Kit hoppers on the shipyard to the depot
+3. Build the **Fuel Hopper** expansion for the shipyard
+4. Connect the **Fuel Hopper** to the depot
 
 With the propellant handling in place, you can rendezvous further route-building craft with this shipyard to refuel (for example the **WOLF SSTO** or **WOLF ES-96 Python**), and start building your orbital industry from there.
 
-Use the "Connect to destination depot" action on the _Transport Computer_ to establish this route. With the **WOlF ES-96 Python** this should be 42 units of transport, which is enough to get started.
-
  ![WOLF ES-96 Python in Kerbin orbit with just-launched Kerbin Shipyard in background, WOLF Transport Computer action windows showing route cost 0]()
 
- Bring the spaceplane back to KSC.
+Keep expanding the route between KSC and Kerbin Orbit to 100 units. Three flights of the Python should be plenty:
+
+- 20 fuel
+- 20 material kits
+- 20 water
+- 20 oxygen
+- 20 food
+
+As you did the last time when setting up transfers over a route:
+
+1. Open the **WOLF Dashboard** to the _Routes_ pane
+2. Click _Manage Transfers_  to open the _Transfer Resources_ interface from the _Routes_ pane of the **WOLF Dashboard**
+3. Select "Kerbin:KSC => Kerbin:Orbit" from the dropdown at the top (the left/right arrows will help when your list is too long to fit on the screen)
+4. In the list of resources, select the down-pointing triangle next to _MaterialKits_
+5. Set _Transfer Amount_ to 20
+6. Click _Transfer_
+7. You should see the lower pane update with the new transfer of 20 _MaterialKits_ over this route
+8. Repeat steps 4-6 for fuel, water and food
+9. _Close_ the _Transfer Resources_ window
+
+![WOLF Dashboard open to the Routes pane. Transfer Resources dialog is open, showing a transfer of material kits and fuel from the KSC depot to the Kerbin Orbit depot][KERBYARDTRANSFERS]
+
+With those transfers organised, it's time to extract the WOLF resources into the MKS industry system. This is done using the various hoppers on the Kerbin Shipyard.
 
 ## Extracting Resources from WOLF to MKS
 
-With bootstrapping supplies taken care of, let's connect the abundance of _Material Kits_ and _Fuel_ produced on Kerbin to the shipyard in orbit.
-
-Switch scenes to the **Kerbin Shipyard**. With the route established, prepare a transfer of 5 _Material Kits_ from KSC to Kerbin Orbit from the _Routes_ pane of the **WOLF Dashboard**:
-
-- At the top of the listing is the _Manage Transfers_ button, click it to open the _Transfer Resources_ dialog
-- Use the left/right arrows or the dropdown menu in the _Transfer Resources_ dialog to select the "Kerbin:KSC => Kerbin:Orbit" route
-- in the top selector, find the _Material Kits_ resource and click the arrow button to the left of it
-- The middle section of the _Transfer Resources_ dialog will expand to show which resource you are about to transfer, how many exist in the source depot and how many are available in the destination depot
-- In the box labelled "Transfer amount" enter 20
-- Do the same for the _Fuel_ resource
-- Click the _Transfer_ button
-
-Now there is a new route carrying 20 abundance of _Material Kits_ and 20 of _Fuel_ to Kerbin Orbit from KSC.
-
-![WOLF Dashboard open to the Routes pane. Transfer Resources dialog is open, showing a transfer of material kits and fuel from the KSC depot to the Kerbin Orbit depot]()
-
 Now open the **WOLF Dashboard** to the _Depots_ pane, expand the _Kerbin: Orbit_ depot so you can watch the figures while we configure the propellant depot, and set the hopper up:
 
- 1. Open a (_Material Kits_) Manufacturing Hopper's PAW (for this we want the PAW and the WOLF Dashboard open)
+ 1. Open a _Material Kits_ Manufacturing Hopper's PAW (for this we want the PAW and the WOLF Dashboard open)
  2. Click _Connect to depot_
  3. Click _Start hopper_
 
 Observe that the abundance of a resource will be reduced the moment you connect the hopper to the depot, regardless of whether or not the hopper is running. Here's what it should look like for you now:
 
-![At the shipyard in orbit, WOLF Dashboard is open to the Depots pane and the Kerbin: Orbit depot is expanded to show the incoming/outgoing/available resources. There are Material Kits outgoing to service the connected manufacturing hopper. The PAW for the manufacturing hopper is open showing the "Disconnect from depot" and "Stop hopper" buttons.]()
+![At the shipyard in orbit, WOLF Dashboard is open to the Depots pane and the Kerbin: Orbit depot is expanded to show the incoming/outgoing/available resources. There are Material Kits outgoing to service the connected manufacturing hopper. The PAW for the manufacturing hopper is open showing the "Disconnect from depot" and "Stop hopper" buttons.][KERBYARDMATKITHOPPERSTART]
 
 While you are here, keep the **WOLF Dashboard** open and see what happens when you stop the hopper and disconnect it from the depot. What you should see happen is that the local resource production will stop when you stop the hopper, and the abundance of the resource in the Kerbin Orbit depot of the **WOLF Dashboard** _Depots_ pane will be deducted from _Outgoing_ and added to _Available_. When you're ready, reconnect the hopper and start it up again.
 
@@ -515,7 +628,227 @@ Now connect and start the other _Material Kits_ hoppers. The combined output of 
 
 ## Establishing the Kerbin Shipyard
 
-Now that resources are flowing to the shipyard, launch an **Advanced Materials Delivery** rocket (you'll find it in the WOLF Tutorial Shipyard folder). Rendezvous with the shipyard and transfer those resources across.
+Now that resources are flowing to the shipyard, wait until there are 35,000 _Material Kits_ available and build a _Fuel Hopper_ which you will find in the _WOLF Tutorial Shipyard_ folder:
+
+1. Open the Konstructor's PAW (right-click menu)
+2. Select _Open Konstructor_
+3. From the _Konstructor_ window select _Select a ship_
+4. From the vessel selection dialog open the _WOLF Tutorial Shipyard_ folder and select _Fuel Hopper_
+5. Verify that you have all the materials required to build the _Fuel Hopper_
+6. Select _Build_
+7. After a brief delay the _Fuel Hopper_ will pop into existence and control will be transferred to the new vessel
+8. Transfer monopropellant from _Kerbin Shipyard_ to the _Fuel Hopper_ using the MKS _Transfer Resources_ window (forklift icon)
+9. Dock the _Fuel Hopper_ with the ship yard. The red/green navigation markers are mounted "forward" of the Clamp-O-Tron Sr to help you orient the vessels neatly
+10. Open the PAW on one of the WOLF Fuel Hopper modules
+11. Click _Connect to depot_
+12. Click _Start hopper_
+
+As with the _Material Kits_ in the manufacturing hoppers, you should see the depot's abundance of fuel drop by 5 to service this hopper. Each Manufacturing Hopper configured for Material Kits will produce 5000 Material Kits per day.
+
+Connect the remaining Fuel Hopper modules to the depot and start them. Each Fuel Hopper configured for LF/Ox will produce 450 LF/day and 500 Ox/day.
+
+Here's a finished Kerbin Shipyard, ready to start the next phase of expansion:
+
+![Assembled Kerbin Shipyard showing shipyard component and fuel hopper docked in orbit][KERBYARDCOMPLETE]
+
+# Minmus Shipyard
+
+To establish the Minmus shipyard the basic steps are:
+
+1. Build an **Expansion Shipyard**, fill it with propellant and launch it to Minmus -- on arrival, place it in a 20km circular orbit
+2. Launch a new **Advanced Materials Delivery** rocket and send it to Minmus
+3. Build the **Orbital Route Builder 15LR** and launch it to Minmus (NB: Transport Computer is on the "top" face of the vessel, only supply 50% propellant load)
+4. At Minmus, rendezvous the **Orbital Route Builder 15LR** with the **Expansion Shipyard** and refuel it to complete that route
+5. Build a new route from Minmus Orbit to Kerbin orbit using the **Orbital Route Builder 15LR** (keep this craft going back and forth to build up 60 route capacity from Minmus to Kerbin)
+6. At Minmus, rendezvous the **Advanced Materials Delivery** with the **Expansion Shipyard** and transfer the resources. Dispose of the **Advanced Materials Delivery** as you see fit.
+7. Transfer bootstrap WOLF resources (Fuel, Material Kits, Water, Oxygen, Food) to Minmus over the new routes
+9. When **Minmus Shipyard** has 4000 _Material Kits_, deploy the _Konstructor_
+
+Let's go through that now. If this list has enough detail for you, work through it and skip to the section **Minmus Expansion**.
+
+## Minmus Expansion Shipyard
+
+The **Expansion Shipyard** requires approximately the following materials:
+
+- 125,000 Material Kits
+- 942 Specialized Parts
+- 263 Alloys
+- 533 Synthetics
+- 63 Robotics
+
+There are sufficient advanced materials remaining from the original delivery, so you'll just have to wait the 10 days for the required quantity of Material Kits to arrive. It will take about 16 days to produce the propellant required for the Expansion Shipyard too. You can speed this up by adding another _Fuel Hopper_ and _Manufacturing Hopper_ assembly to the **Kerbin Shipyard** along with the necessary Kerbin-based production, routes and transfers. For the purpose of the walkthrough, just "warp to next sunrise" 16 times to produce the required material kits and propellant.
+
+Once you have the materials, build the **Expansion Shipyard**, fill it with propellant and send it to **Minmus**.
+
+When the **Expansion Shipyard** arrives at **Minmus**:
+
+- Place the **Expansion Shipyard** in a 20km circular orbit
+- Undock the _Depot_ module at the front (it's attached via the Clampotron)
+- Switch to the _Depot_ spacecraft
+- Select _Establish Depot_ from the depot module's PAW
+
+At this point, return to the KSC and launch the **Advanced Materials Delivery** craft. Send it to Minmus to rendezvous with the **Minmus Shipyard**. Transfer the advanced resources to the shipyard, then land the **Advanced Materials Delivery** on the _Greater Flats_ for use as a fuel depot later.
+
+Now return to the **Kerbin Shipyard** and build the **Orbital Route Builder 15LR**. The **Orbital Route Builder 15LR** requires 31335 _Material Kits_ (2 days production) and 6480 _Liquid Fuel_ (4 days production):
+
+- Start a cargo route and send the **Orbital Route Builder 15LR** to **Minmus**
+- At **Minmus**, rendezvous the **Orbital Route Builder 15LR** with **Minmus Shipyard**
+- Refuel and complete the route
+- Now transfer some basic resources to Minmus for the **Minmus Shipyard**: 5 Fuel and 10 Material Kits
+- Start a cargo route and send the **Orbital Route Builder 15LR** back to **Kerbin Shipyard**
+
+The **Orbital Route Builder 15LR** should be sent back and forth a few times to build up around 60 units of route capacity in each direction. This is to cater for some materials that we will be sending to Minmus to bootstrap the infrastructure, and then to cater for resources returning to Kerbin from Minmus as Minmus industry is established.
+
+With 10 Material Kits abundance being extracted, **Minmus Shipyard** will be producing 10,000 _Material Kits_ per day. When there are 4,000 _Material Kits_ available, ,deploy the _Konstructor_.
+
+Now **Minmus Shipyard** has been established, it's time to expand our WOLF infrastructure to **Minmus** itself.
+
+## Minmus Expansion
+
+At this point you should be familiar with:
+
+- Establishing WOLF biome depots
+- Establishing routes between WOLF biome depots
+- Configuring resources transfers over routes
+- Configuring WOLF resource hoppers to convert WOLF resources to MKS resources
+
+What comes next is learning how to wrangle the armies of Kerbals that will be required to operate the WOLF infrastructure on Minmus. But first, let's find what resources are available on Minmus.
+
+### Minmus Skycrane
+
+- Build **Satellite Bundle** and deploy the relay sats
+  - Deployer should go to 357.941km x 534.657km orbit
+  - Release one relay satellite just before each periapsis
+  - Circularise each relay satellite at periapsis (357.941km circular orbit, 40400s period, aka 1 Minmus rotation)
+  - Double-check the deployer's orbit between deployments
+  - When three relays are deployed, put the deployer into a 200km polar orbit
+  - Deploy the scanner and perform an orbital analysis
+- Build the Skycrane (WOLF Depot Landers)
+
+For the Greater Flats and Midlands biomes on Minmus:
+
+- Build a Skycrane Depot Box
+- Rendezvous Skycrane with the Skycrane Depot Box
+- Dock the Skycrane Depot Box with the Skycrane
+- Land the Skycrane at the new biome
+- Survey the WOLF biome
+- Undock the Depot Box
+- Switch to the Depot Box
+- Select "Establish depot" from the Depot module's PAW
+- Switch back to the Skycrane
+- Return Skycrane to parking orbit
+
+The remaining biome depots can wait until the Minmus Shipyard is self-sufficient.
+
+Useful Minmus landing sites:
+
+- Midlands (4.390, -86.594 or 4N 86 43'37"W -- flat plateau to the immediate east of Greater Flats)
+- Greater Flats (0, -7.5 or 0 7 30'00"W)
+- Flats (-22.535, 171.826)
+- Lesser Flats (9.404, -178.003)
+- Great Flats (-10, -92 or 10S 92W)
+- Poles (78.045, 164.276)
+- Lowlands (0.026, -51.516)
+- Highlands
+
+### Crew Transport Preparation
+
+- Add Passenger Terminal to Kerbin Shipyard
+- Launch **Reactor Maintenance** to rendezvous with Kerbin Shipyard
+- Build **Crew Transport**
+- Dock **Reactor Maintenance** to **Crew Transport**
+- Perform Maintenance on **Crew Transport** (engineer needs to do an EVA)
+- Dock **Reactor Maintenance** to **Kerbin Shipyard**
+
+### Minmus Route Preparation
+
+Use **Orbital Route Builder 15LR** to build a route from **Minmus Shipyard** to _Greater Flats_ on **Minmus** and back, and from _Greater Flats_ to _Midlands_ and back:
+
+- Rendezvous **Orbital Route Builder 15LR** with **Minmus Shipyard**
+- Move all the propellant from the route builder to the shipyard
+- Start the route
+- Put enough propellant in the route builder to give ~500m/s delta-v
+- Land **Orbital Route Builder 15LR** on _Greater Flats_
+- Complete the route (which should be 0 cost)
+- Start a new route
+- Launch the route builder and rendezvous with **Minmus Shipyard**
+- Refuel the route builder
+- Complete the route (which should be 0 cost)
+
+### 01 Midlands Exotic Minerals
+
+- Build **01 Midlands Exotic Minerals** (note that this is just one harvester, the Depot has exactly the power required to run this module)
+- Rendezvous **Skycrane** with **01 Midlands Exotic Minerals**
+- Dock **01 Midlands Exotic Minerals** with **Skycrane**
+- Land **Skycrane** in _Midlands_ biome
+- Undock **01 Midlands Exotic Minerals**
+- Connect **01 Midlands Exotic Minerals** to the Midlands biome depot
+- Route the 10 Exotic Minerals production from Midlands to Greater Flats
+
+### 02 Greater Flats Synthetics
+
+Route these resources to Minmus Greater Flats
+
+- 1 Food
+- 1 Oxygen
+- 5 Water
+- 3 Material Kits
+
+Build **02 Greater Flats Specialized Parts** at **Minmus Shipyard**. Fuel it and leave it in a parking orbit (eg: 15km).
+
+Launch a **WOLF Python 95 (Crew Pod)** carrying a **Crew Pod** with the following crew:
+
+- Engineer
+- Kolonist
+- Mechanic
+- Medic
+- Miner
+- Scientist
+- Technician
+
+Now get that crew to the **02 Greater Flats Specialized Parts** vessel:
+
+- Rendezvous **Crew Transport** with **WOLF Python 95 (Crew Pod)**
+- Move the crew pod over to dock with **Crew Transport**
+- Transfer the Supplies and Fertilizer resources from **WOLF Python 95 (Crew Pod)** to the **Crew Transport**
+- Send **Crew Transport** to Minmus
+- Return the **WOLF Python 95 (Crew Pod)** to **KSC**
+- At Minmus, rendezvous **Crew Transport** with **02 Greater Flats Specialized Parts**
+- Detach the **Crew Transfer Pod**
+- Dock the **Crew Transfer Pod** with the lander
+- Land **02 Greater Flats Specialized Parts** at _Greater Flats_
+- Connect the lander to the depot
+- transfer 5 Specialized Parts, 2 Alloys, 1 Synthetics from _Greater Flats_ to _Minmus Orbit_
+- transfer 1 Alloys from _Minmus Orbit_ to _Kerbin Orbit_
+- Connect the Alloys, Synthetics and Specialized Parts hoppers of **Minmus Shipyard** to the depot and start them
+
+### 03 X Electronics
+
+### 04 X Robotics
+
+### 05 Minmus Orbit Colony Supplies
+
+### Maximising Minmus Production
+
+## Passenger Transport
+
+### Passengers from KSC to Kerbin Orbit
+
+- 2 habitation per luxury berth for the origin terminal
+- 2 life support per luxury berth for the origin terminal
+- passenger terminal deployed
+- Colony Supplies requires specialised parts!
+- Start with stock passenger transport
+
+### Passengers from Kerbin Orbit to Minmus Orbit
+
+### Transfer Passengers to Depot Expansion
+
+- EVA and jetpack
+- Dock and transfer crew between modules
+- Load crew into Crew Pod and dock crew pod to depot expansion
+
+## Mun Expansion
 
 # WOLF Walkthrough Conclusion
 
@@ -533,7 +866,7 @@ Come back later to check things out.
 
 [AddOnInstallation]: Screenshots/AddonInstallation.png "Drag the contents of the USI GameData folder to teh KSP GameData folder, then drag the contents of the CRP GameData folder to the KSP GameData folder, overwriting the CommunityResourcePack folder that's already there"
 [TutorialShipsInstall]: Screenshots/WOLFTutorialSaveInstall.png "Drag the WOLF Tutorial folder from the WOLF Tutorial package to the Kerba Space Program saves folder, replacing any existing save of the same name"
-[WolfDepotDeployerParts]: Screenshots/WolfDepotDeployerParts.png "Runway scene with Wolf Depot Deployer showing WOLF related parts with PAWs open for Surface Scanner, WOLF Transport Computer and Bon Voyage controller"
+[WolfDepotDeployerParts]: Screenshots/WOLFDepotDeployerParts.png "Runway scene with Wolf Depot Deployer showing WOLF related parts with PAWs open for Surface Scanner, WOLF Transport Computer and Bon Voyage controller"
 [WolfDashboardHarvestableResourcesEmpty]: Screenshots/WolfDashboardHarvestableResourcesEmpty.png "Runway scene with WOLF Dashboard open to Harvestable Resources pane showing no biomes with harvestable resources because they have not been scanned"
 [WolfDashboardHarvestableResourcesScannedBiome]: Screenshots/WolfDashboardHarvestableResourcesScannedBiome.png "SPH scene with WOLF Dashboard open to Harvestable Resources pane showing resource abundance for freshly scanned biome"
 [SPHWOLFEMPTY]: Screenshots/SPHWOLFEMPTY.png "SPH scene with WOLF Dashboard open to Depots pane showing no depots"
@@ -545,12 +878,20 @@ Come back later to check things out.
 [RUNWAYDEPOTBONVOYAGE]: Screenshots/RUNWAYDEPOTBONVOYAGE.png "Runway scene with WOLF Depot Deployer Rover PAW and Bon Voyage control panel with destination set"
 [KERBINSHORESDEPOTDEPLOYMENT]: Screenshots/KERBINSHORESDEPOTDEPLOYMENT.png "Kerbin Shores scene with WOLF Depot Deployer. The depot and trailer are decoupled and Surface Scanner PAW is open. There are numbers 1, 2 and 3 indicating the order of operations."
 [KERBINSHORESDEPOTDASHBOARD]: Screenshots/KERBINSHORESDEPOTDASHBOARD.png "Kerbin Shores scene with WOLF Dashboard open to Depots pane showing new Kerbin Shores depot"
+[SPHDDRMaterialKitsAndCrew]: Screenshots/SPHDepotDeployer5MaterialKitsTrailer.png
 [MountainsDepotDeployerConnectOriginDepot]: Screenshots/MountainsDepotDeployerConnectOriginDepot.png "Mountains scene with WOLF Depot Deployer rover showing the Transport Computer PAW. The 'connect to origin depot' action is visible."
 [KSCDepotDeployerCoonectDestinationDepot]: Screenshots/KSCDepotDeployerCoonectDestinationDepot.png "WOLF Depot Deployer rover at KSC with 'connect to destination depot' action visible in the Transport Computer PAW"
-[SPHDepotDeployerSubassemblies]: Screenshots/SPHDepotDeployerSubassemblies.png "SPH scene with subassemblies listing visible showing the Tutorial 5 Material Kits and Tutorial 20 Fuel subassemblies"
+[SPHWOLFDASHSTARTERPRODUCTION]: Screenshots/SPHWOLFDASHSTARTERPRODUCTION.png "SPH scene with WOLF dashboard showing starter depots expanded with completed production of material kits, fuel, food, oxygen, water and fertilizer"
+[SPHWOLFDASHROUTESPANE]: Screenshots/SPHWOLFDASHROUTESPANE.png "SPH scene with WOLF dashboard open to routes pane showing starter routes established during depot construction"
+[SPHWOLFDASHMANAGETRANSFERS]: Screenshots/SPHWOLFDASHMANAGETRANSFERS.png "SPH scene with WOLF Dashboard showing the Manage Transfers interface"
+[KSCTransferMaterialKitsMountainsToKSC]: Screenshots/KSCTransferMaterialKitsMountainsToKSC.png "KSC scene with Transfer Resources interface showing a new transfer of 6 MaterialKits from Mountains to KSC"
 [KSCTransfersFromHighlandsMountainsShores]: Screenshots/KSCTransfersFromHighlandsMountainsShores.png "KSC scene with WOLF Dashboard showing transfers from highlands, mountains and shores to KSC"
 [SPHRouteBuilderRover]: Screenshots/SPHRouteBuilderRover.png "SPH scene showing Route Builder Rover"
 [KSCRouteBuilderRoutesBuilt]: Screenshots/KSCRouteBuilderRoutesBuilt.png "KSC scene with WOLF Dashboard open to the Routes pane. There are a number of routes built between KSC and the various biomes, expanded with the 45 payload capacity Route Builder Rover"
-[ManageTransfersDiscussion]: Screenshots/ManageTransfersDiscussion.png "Manage Transfers dialog showing resources available at source and destination"
+[SmallSSTORocketStartRouteAtLaunch]: Screenshots/SmallSSTORocketStartRouteAtLaunch.png
+[SmallSSTORocketRouteCost30]: Screenshots/SmallSSTORocketRouteCost30.png
+[KERB375ROCKETCREDITS]: Screenshots/KERB375ROCKETCREDITS.png
+[WOLFSSTO0CREDITS]: Screenshots/WOLFSSTO0CREDITS.png
 [SSTORTCOST8]: Screenshots/WOLFSSTOinOrbitWithRouteCost8.png "The WOLF SSTO craft in orbit with Transport Computer PAW open showing route cost of 8"
-[ES96RTCOST85]: Screenshots/ES96PythonInOrbitWithRouteCost85.png "The ES-96 Python in orbit with Transport Computer PAW open showing route cost of 85"
+[ES96RTCOST85]: Screenshots/ES96PythonInOrbitWithRouteCost85.png "The ES-96 Python in orbit with Transport Computer PAW open showing route cost of over 80"
+[VABWOLFTutorial100TransportCredits]: Screenshots/VABWOLFTutorial100TransportCredits.png
