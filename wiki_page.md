@@ -29,10 +29,17 @@
     - [Minmus Route Preparation](#minmus-route-preparation)
     - [01 Midlands Exotic Minerals](#01-midlands-exotic-minerals)
     - [02 Greater Flats Synthetics](#02-greater-flats-synthetics)
-    - [03 X Electronics](#03-x-electronics)
-    - [04 X Robotics](#04-x-robotics)
-    - [05 Minmus Orbit Colony Supplies](#05-minmus-orbit-colony-supplies)
+    - [03 Midlands Agricultural Support](#03-midlands-agricultural-support)
+    - [04 Greater Flats Food and Electronics](#04-greater-flats-food-and-electronics)
+    - [05 Greater Flats Robotics](#05-greater-flats-robotics)
     - [Maximising Minmus Production](#maximising-minmus-production)
+    - [06 Lowlands Polymers](#06-lowlands-polymers)
+    - [07 Flats Stage 1](#07-flats-stage-1)
+    - [08 Highlands Material Kits](#08-highlands-material-kits)
+    - [09 Greater Flats Material Kits](#09-greater-flats-material-kits)
+    - [10 Poles Exotic Minerals](#10-poles-exotic-minerals)
+    - [11 Midlands Exotics and Food](#11-midlands-exotics-and-food)
+    - [12 Great Flats Specialized Parts](#12-great-flats-specialized-parts)
   - [Passenger Transport](#passenger-transport)
     - [Passengers from KSC to Kerbin Orbit](#passengers-from-ksc-to-kerbin-orbit)
     - [Passengers from Kerbin Orbit to Minmus Orbit](#passengers-from-kerbin-orbit-to-minmus-orbit)
@@ -507,7 +514,7 @@ The **ES-96 Python** got to orbit in the order of 80 to 90 Credits for 42t. The 
 
 How do we produce Transport Credits? The short version is that _Transport Credits_ are produced by the _WOLF Transport Module_. By now you should be familiar with the drill: start assembling a new WOLF infrastructure component with the WOLF Dashboard open to the Planning pane, beginning with the WOLF Transport Module. Fuel is produced by the Fuel(Ore) or Fuel(H2O) recipes in the WOLF Refinery Module — each recipe will take 5 points of input availability and provide 2 points of Fuel availability. As usual one harvester will provide sufficient Ore or Water for two refineries.
 
-The "atomic" component of a Transport Credit production line is 1 Transport Module (producing 10 _Transport Credits_ from 10 _Fuel_), 3 MHU-500 harvesters (_Water_), and 6 Refinery Modules (producing 2 _Fuel_ from 5 _Water_) this needs to be supplemented with 1 abundance of _Material Kits_. To produce the target of 100 Transport Credits to get our *Fuel* and _Material Kits_ to orbit we need to start off with:
+The "atomic" component of a Transport Credit production line is 1 Transport Module (producing 10 _Transport Credits_ from 10 _Fuel_), 3 MHU-500 harvesters (_Water_), and 6 Refinery Modules (producing 2 _Fuel_ from 5 _Water_) this needs to be supplemented with 1 abundance of _Material Kits_. To produce the target of 100 Transport Credits to get our _Fuel_ and _Material Kits_ to orbit we need to start off with:
 
 - 10 x WOLF Transport Module
 - 30 x MHU-500 harvesters (harvesting water)
@@ -708,11 +715,17 @@ Now **Minmus Shipyard** has been established, it's time to expand our WOLF infra
 At this point you should be familiar with:
 
 - Establishing WOLF biome depots
-- Establishing routes between WOLF biome depots
+- Establishing routes between WOLF biome depots using a rover
 - Configuring resources transfers over routes
 - Configuring WOLF resource hoppers to convert WOLF resources to MKS resources
 
 What comes next is learning how to wrangle the armies of Kerbals that will be required to operate the WOLF infrastructure on Minmus. But first, let's find what resources are available on Minmus.
+
+Some things to consider for Minmus: first is that the expansion will be strapped for resources. After this infrastructure is in place we'll have the resources required to bootstrap a new world without any stress. For Minmus we're starting with a fixed amount of resources from one shipment and boot-strapping the infrastructure to support a shipyard.
+
+Secondly, I've found Minmus hostile to rovers. My rovers will slide forever while a regular lander sits a little awkwardly on a slope. There are currently issues with the wheels on the USI rovers (Malemute and Karibou) so you can't manually drive them anywhere, and the same slipping and sliding issues affect them anyway.
+
+What I have found easiest for Minmus is using rockets to drop depot expansions onto the surface from orbit. We'll also be shipping crew in from Kerbin, since WOLF requires a significant investment in infrastructure to transport crew (we'll get to that for the Mun expansion).
 
 ### Minmus Skycrane
 
@@ -744,10 +757,10 @@ Useful Minmus landing sites:
 
 - Midlands (4.390, -86.594 or 4N 86 43'37"W -- flat plateau to the immediate east of Greater Flats)
 - Greater Flats (0, -7.5 or 0 7 30'00"W)
-- Flats (-22.535, 171.826)
+- Flats (1.5, -40 or 1 30' 0"N 40 0' 0"W -- bottom lobe of the flats just NW of Greater Flats)
 - Lesser Flats (9.404, -178.003)
 - Great Flats (-10, -92 or 10S 92W)
-- Poles (78.045, 164.276)
+- Poles (78.045, 164.276) (exotic metals, minerals)
 - Lowlands (0.026, -51.516)
 - Highlands
 
@@ -777,7 +790,9 @@ Use **Orbital Route Builder 15LR** to build a route from **Minmus Shipyard** to 
 
 ### 01 Midlands Exotic Minerals
 
-- Build **01 Midlands Exotic Minerals** (note that this is just one harvester, the Depot has exactly the power required to run this module)
+This first depot expansion is trivial. This is only one harvester, and the just-established Depot has exactly the power required to run this single module.
+
+- Build **01 Midlands Exotic Minerals**
 - Rendezvous **Skycrane** with **01 Midlands Exotic Minerals**
 - Dock **01 Midlands Exotic Minerals** with **Skycrane**
 - Land **Skycrane** in _Midlands_ biome
@@ -822,15 +837,183 @@ Now get that crew to the **02 Greater Flats Specialized Parts** vessel:
 - transfer 1 Alloys from _Minmus Orbit_ to _Kerbin Orbit_
 - Connect the Alloys, Synthetics and Specialized Parts hoppers of **Minmus Shipyard** to the depot and start them
 
-### 03 X Electronics
+### 03 Midlands Agricultural Support
 
-### 04 X Robotics
+With Specialized Parts and Sythetics being manufactured there's a bit less pressure on resource reserves at **Minmus Shipyard**. Take some time to deploy the remaining Depot modules to the remaining flats, Lowlands, Highlands, and Poles.
 
-### 05 Minmus Orbit Colony Supplies
+Remember to survey the WOLF Biome using the survey scanner nestled in the nose of the **Skycrane**.
+
+From here we're going to work towards producing Electronics and Robotics. To do that we will need to produce material kits to support the Electronics and Robotics production as well as to support maintenance of the depots. There will also be demand for food, water and oxygen.
+
+The immediate next step is to get production of a surplus 5 food, water, oxygen and material kits at Greater Flats, allowing Greater Flats to no longer be dependent on imports of life support from orbit. To produce food at _Greater Flats_ we need to source _Fertilizer_ which means finding _Gypsum_.
+
+After that life support capacity improvement, we'll pursue small increments in Alloys, Synthetics and Material Kits production followed by small increments in Robotics and Electronics production. The main constraint here is going to be limited supplies of those resources at **Minmus Shipyard** -- but this expansion project will be sipping from a very large barrel.
+
+That's the basic road map, now let's get to work!
+
+In the WOLF Tutorial save game, _Midlands_ have 20 abundance of _Gypsum_, 50 abundance of _Hydrates_ but no water. The _Poles_  have 50 _Gypsum_ but no _Water_ or _Hydrates_. So for this fertilizer factory we'll expand the Midlands biome depot.
+
+This depot lander requires the following to be transferred from Greater Flats:
+
+- 1 Food
+- 1 Oxygen
+- 3 Material Kits
+
+Send this crew as well:
+
+- Engineer
+- Kolonist
+- Mechanic
+- Medic
+- Scientist
+
+### 04 Greater Flats Food and Electronics
+
+This one's pretty straight-forward: just use the water and dirt available in the Greater Flats along with the _Fertilizer_ we just started producing in the Midlands to produce lots of food. This lander will add 60 abundance of _Food_ to _Greater Flats_ which will be sufficient to supply the remaining Minmus depots.
+
+To produce 1 abundance of _Electronics_ we need 5 _Material Kits_ and 5 _Synthetics_.
+
+Arrange for 8 more _Exotic Minerals_ to be transferred to _Greater Flats_ from _Midlands_ if you haven't already taken care of that mountain of exports ready to be transferred.
+
+Send this crew:
+
+- Farmer
+- Miner
+- Technician
+
+### 05 Greater Flats Robotics
+
+No extra resources required for this one, just the crew:
+
+- Miner
+- Scientist
+- Technician
 
 ### Maximising Minmus Production
 
+With the four advanced materials taken care of, Minmus is now effectively self-sufficient.
+
+From here you can skip to **Mun Expansion**, but you'll need to _disconnect **Minmus Shipyard** from the depot first_, and transfer all Minmus Orbit resources to Kerbin Orbit.
+
+If you want to improve the Mun expansion experience a little, stick around and we'll look at strategies for maximising output from biome depots. Eventually we'll finish expanding Minmus just to have resources to produce _Prototypes_, _Colony Supplies_ and _Machinery_ anyway. _Colony Supplies_ in particular are important since they are required as part of the WOLF passenger transport system. While flying rockets is fun, being a bus service can get tedious.
+
+### 06 Lowlands Polymers
+
+_Polymers_ are needed for _Material Kits_ and _Synthetics_. More polymers is good!
+
+Prepare for this depot expansion by transferring these resources to the **Lowlands** biome:
+
+- 2 Fertilizer
+- 1 Food
+- 3 Material Kits
+
+You'll need these crew for the depot expansion itself:
+
+- Engineer
+- Kolonist
+- Farmer
+- Mechanic
+- Medic
+- Miner
+- Scientist
+- Technician
+
+Route the Exotics, Polymers and Synthetics produced by this expansion back to _Greater Flats_.
+
+### 07 Flats Stage 1
+
+This depot will be producing a small quantity of _Material Kits_, a lot of water, and laying the infrastructure for a second depot to produce some more _Material Kits_ as more _Polymers_ become available.
+
+- 1 Food
+
+Crew:
+
+- Engineer
+- Kolonist
+- Mechanic
+- Medic
+- Miner
+- Scientist
+- 2 x Technician
+
+### 08 Highlands Material Kits
+
+- 1 Food
+
+- Engineer
+- Kolonist
+- Mechanic
+- Medic
+- Miner
+- Scientist
+- 2 x Technician
+
+This gives us 7 extra _Material Kits_
+
+### 09 Greater Flats Material Kits
+
+- 1 Food
+
+- Engineer
+- Kolonist
+- Miner
+- 2 x Technician
+
+This gives us 36 extra _Material Kits_. Between this and the Highlands depot previously deployed, that's a fine pile of _Material Kits_ to be sitting on. A lot of these will be consumed as _Colony Supplies_ which are required for WOLF passenger routes. More about that soon.
+
+### 10 Poles Exotic Minerals
+
+The Poles doesn't have much that will help keep it self-sufficient so import the resources needed, and only build what's reqiuired to extract all those _Exotic Minerals_.
+
+Transfer these supplies in:
+
+- 1 Food
+- 3 Material Kits
+- 1 Oxygen
+- 5 Water
+
+The lander will need this crew:
+
+- Engineer
+- Kolonist
+- Mechanic
+
+Once that depot is established, transfer the _Exotic Minerals_ back to _Greater Flats_.
+
+### 11 Midlands Exotics and Food
+
+We revisit Midlands to extract the remnant _Exotic Minerals_ and produce some food while we're at it.
+
+Imports:
+
+- 3 Material Kits
+
+Crew:
+
+- Farmer
+
+### 12 Great Flats Specialized Parts
+
+This one uses a heap of imported materials to produce _Specialized Parts_ in situ. It's a toss-up between importing _Exotic Minerals_ versus exporting lots of _Silicon_ and _Rare Metals_.
+
+- 12 Exotic Minerals
+- 1 Food
+- 3 Material Kits
+- 1 Oxygen
+- 5 Water
+
+The crew is
+
+- Engineer
+- Kolonist
+- Mechanic
+- Medic
+- 2 x Miner
+- Scientist
+- 2 x Technician
+
 ## Passenger Transport
+
 
 ### Passengers from KSC to Kerbin Orbit
 
