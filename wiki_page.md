@@ -957,8 +957,6 @@ This gives us 7 extra _Material Kits_
 
 ### 09 Greater Flats Material Kits (yellow)
 
-- 1 Food
-
 - Engineer
 - Kolonist
 - Miner
@@ -966,9 +964,11 @@ This gives us 7 extra _Material Kits_
 
 This gives us 36 extra _Material Kits_. Between this and the Highlands depot previously deployed, that's a fine pile of _Material Kits_ to be sitting on. A lot of these will be consumed as _Colony Supplies_ which are required for WOLF passenger routes. More about that soon.
 
+This lander requires 237,310 _Material Kits_. If you've followed the walkthrough your **Minmus Shipyard** will be producing 15,000 _Material Kits_ per day. Set an alarm (I use Kerbal Alarm Clock in preference to the built-in alarm clock) for the point in time that there will be enough _Material Kits_ to build this lander. Don't waste time with storage full of _Material Kits_!
+
 ### 10 Poles Exotic Minerals (white)
 
-The Poles doesn't have much that will help keep it self-sufficient so import the resources needed, and only build what's reqiuired to extract all those _Exotic Minerals_.
+The Poles doesn't have much that will help keep it self-sufficient so import the resources needed, and only build what's required to extract all those _Exotic Minerals_.
 
 Transfer these supplies in:
 
@@ -985,6 +985,8 @@ The lander will need this crew:
 
 Once that depot is established, transfer the _Exotic Minerals_ back to _Greater Flats_.
 
+45,580 _Material Kits_.
+
 ### 11 Midlands Exotics and Food
 
 We revisit Midlands to extract the remnant _Exotic Minerals_ and produce some food while we're at it.
@@ -996,6 +998,8 @@ Imports:
 Crew:
 
 - Farmer
+
+200,887 _Material Kits_
 
 ### 12 Great Flats Specialized Parts
 
@@ -1016,6 +1020,8 @@ The crew is
 - 2 x Miner
 - Scientist
 - 2 x Technician
+
+155,580 _Material Kits_.
 
 ## Passenger Transport
 

@@ -334,7 +334,7 @@ So rough plan:
 
 ### Minmus
 
-+ Poles (78.045, 164.276)
++ Poles (82 43'31"N 77 16'36"W)
 + Lowlands (0.026, -51.516)
 + Midlands (4.390, -86.594 -- flat plateau)
 + Highlands (0N, 82E -- equator East of Greater Flats)
@@ -411,16 +411,18 @@ Satellites:
 6. Start the outbound journey
 7. Arrive at destination
 8. End the route (record consumables remaining)
-9.  Quicksave
+9. Quicksave
 10. Start route
 11. Start the return journey
 12. Arrive at origin (record consumables remaining)
 13. Load consumables required to reduce route cost to 0
 14. End the route
-15. Save game as "Buillt route A to B"
+15. Save game as "Built route A to B"
 
 770m/s
 410m/s
+
+Greater Flats to Poles: 891 start, 492, 40
 
 ## References
 
