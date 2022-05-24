@@ -169,15 +169,15 @@ Total production required from Minmus will then be the minimum required to run 1
 3. Alloys x 6 (1 + 5)
    + Metals x 6 (1 x 6)
    + Rare Metals x 24 (4 x 6)
-4. Electronics x 1
-   + Material Kits x 5
-   + Synthetics x 5
-5. Robotics x 1
-   + Alloys x 5
-   + Material Kits x 5
-6. Synthetics x 6 (1 + 5)
+4. Synthetics x 6 (1 + 5)
    + Exotic Minerals x 24 (4 x 6)
    + Polymers x 6 (1 x 6)
+5. Electronics x 1
+   + Material Kits x 5
+   + Synthetics x 5
+6. Robotics x 1
+   + Alloys x 5
+   + Material Kits x 5
 
 The sum total thus becomes:
 
@@ -337,9 +337,9 @@ So rough plan:
 + Poles (78.045, 164.276)
 + Lowlands (0.026, -51.516)
 + Midlands (4.390, -86.594 -- flat plateau)
-+ Highlands
++ Highlands (0N, 82E -- equator East of Greater Flats)
 + Slopes
-+ Flats (-22.535, 171.826)
++ Flats (1 49'32"N, 40 13'8"W -- just NW of Greater Flats)
 + Lesser Flats (9.404, -178.003)
 + Great Flats (-10, -92)
 + Greater Flats
@@ -348,6 +348,7 @@ Satellites:
 
 + Synchronous orbit: 357940.87 (40400s)
 + Deployer apoapsis: 534657.74 ()
++ "Low" orbit is 10-20km
 
 ### Mun
 
@@ -369,6 +370,13 @@ Satellites:
 + Southwest Crater
 + Twin Craters (-5.916, 139.817) (5 54'56"S, 139 49' 1"E)
 
+Satellites:
+
++ Synchronous orbit is not possible
++ Satellite orbit:
++ Deployer apoapsis:
++ "Low" orbit is under 60km
+
 ### Eve
 
 + Shallows (-55.060, 113.400 - near Western Sea)
@@ -384,7 +392,35 @@ Satellites:
 + Find or build a tool to build TOC from Markdown headings
 + Find or build a tool to generate table of illustrations
 + Resource conversion table listing the producer that you can get desired materials from (ie: one column for a resource, second column showing which modules have the recipe)
++ Pictures of each location
+  + from orbit to give an overview
+  + from destination to show specifics
++ Include the route building in the walkthrough specifically
++ Upgrade to Orbital Route Builder 75 earlier in Minmus campaign
++ Merge the walkthrough with the save game repository
 
+## Checklists
+
+### Route Building
+
+1. Save game as "building route origin to destination"
+2. Move all consumables (propellant, supplies, fertilizer) to nearby storage
+3. Start route
+4. Load consumables required for out-and-back trip (record comsumables loaded eg: delta-v for a rocket)
+5. Quicksave
+6. Start the outbound journey
+7. Arrive at destination
+8. End the route (record consumables remaining)
+9.  Quicksave
+10. Start route
+11. Start the return journey
+12. Arrive at origin (record consumables remaining)
+13. Load consumables required to reduce route cost to 0
+14. End the route
+15. Save game as "Buillt route A to B"
+
+770m/s
+410m/s
 
 ## References
 

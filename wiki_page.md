@@ -35,9 +35,9 @@
     - [Maximising Minmus Production](#maximising-minmus-production)
     - [06 Lowlands Polymers](#06-lowlands-polymers)
     - [07 Flats Stage 1](#07-flats-stage-1)
-    - [08 Highlands Material Kits](#08-highlands-material-kits)
-    - [09 Greater Flats Material Kits](#09-greater-flats-material-kits)
-    - [10 Poles Exotic Minerals](#10-poles-exotic-minerals)
+    - [08 Highlands Material Kits (blue)](#08-highlands-material-kits-blue)
+    - [09 Greater Flats Material Kits (yellow)](#09-greater-flats-material-kits-yellow)
+    - [10 Poles Exotic Minerals (white)](#10-poles-exotic-minerals-white)
     - [11 Midlands Exotics and Food](#11-midlands-exotics-and-food)
     - [12 Great Flats Specialized Parts](#12-great-flats-specialized-parts)
   - [Passenger Transport](#passenger-transport)
@@ -45,6 +45,7 @@
     - [Passengers from Kerbin Orbit to Minmus Orbit](#passengers-from-kerbin-orbit-to-minmus-orbit)
     - [Transfer Passengers to Depot Expansion](#transfer-passengers-to-depot-expansion)
   - [Mun Expansion](#mun-expansion)
+    - [Mun Shipyard](#mun-shipyard)
 - [WOLF Walkthrough Conclusion](#wolf-walkthrough-conclusion)
 
 ## Goals
@@ -936,7 +937,11 @@ Crew:
 - Scientist
 - 2 x Technician
 
-### 08 Highlands Material Kits
+### 08 Highlands Material Kits (blue)
+
+If you are like me and abhor trying to land the **Orbital Route Builder 15LR** on terrain that is rarely ever level, check out the **Orbital Route Builder 75** which not only has a larger, more stable landing footprint but also provides 75 route capacity in each trip. It's massively over-sized for this depot expansion but it's so much easier to land on Minmus Highlands and basiclaly anywhere on Mun. Build it now, you'll really appreciate it later!
+
+While you're at it, check out the Skycrane Propellant Dump which provides a nice reservoir of propellant to help you get those 0-credit routes. Land from orbit with full tanks. Empty the route builder's propellant into the propellant dump, start the transport route, then put enough propellant in the tanks for the trip out and back. Your outbound trip will be 0 credits, your inbound trip can refuel fromm what's left in the propellant dump. The catch with the larger route builder is that it's got about half the delta-v of the 15LR (LR for "Long Range").
 
 - 1 Food
 
@@ -950,7 +955,7 @@ Crew:
 
 This gives us 7 extra _Material Kits_
 
-### 09 Greater Flats Material Kits
+### 09 Greater Flats Material Kits (yellow)
 
 - 1 Food
 
@@ -961,7 +966,7 @@ This gives us 7 extra _Material Kits_
 
 This gives us 36 extra _Material Kits_. Between this and the Highlands depot previously deployed, that's a fine pile of _Material Kits_ to be sitting on. A lot of these will be consumed as _Colony Supplies_ which are required for WOLF passenger routes. More about that soon.
 
-### 10 Poles Exotic Minerals
+### 10 Poles Exotic Minerals (white)
 
 The Poles doesn't have much that will help keep it self-sufficient so import the resources needed, and only build what's reqiuired to extract all those _Exotic Minerals_.
 
@@ -1032,6 +1037,19 @@ The crew is
 - Load crew into Crew Pod and dock crew pod to depot expansion
 
 ## Mun Expansion
+
+### Mun Shipyard
+
+- Prepare for expansion by building route from _Kerbin Orbit_ to _Mun Orbit_
+- Transfer 15 _Material Kits_, 5 _Specialized Parts_, 1 _Alloys_, 1 _Electronics_, 1 _Robotics_ and 1 _Synthetics_ to _the Mun_
+- Build **Expansion Shipyard** at **Kerbin Shipyard**
+- Rename **Expansin Shipyard** to **Mun Shipyard**
+- Provide **Mun Shipyard** with starter resources of _Alloys_, _Electronics_, _Robotics_ and _Prototypes_
+- Send **Mun Shipyard** to _the Mun_
+- Once at _the Mun_ put **Mun Shipyard** into a circular 30km orbit at 0 inclination
+- Build the **A/E/R/S Hopper** shipyard component
+- Dock the **A/E/R/S Hopper** to the **Mun Shipyard**
+- Connect the four WOLF Manufacturing Hoppers to the depot and start them
 
 # WOLF Walkthrough Conclusion
 
