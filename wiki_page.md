@@ -24,7 +24,7 @@
 - [Minmus Shipyard](#minmus-shipyard)
   - [Minmus Expansion Shipyard](#minmus-expansion-shipyard)
   - [Minmus Expansion](#minmus-expansion)
-    - [Minmus Skycrane](#minmus-skycrane)
+    - [Minmus CommNet and Skycrane](#minmus-commnet-and-skycrane)
     - [Crew Transport Preparation](#crew-transport-preparation)
     - [Minmus Route Preparation](#minmus-route-preparation)
     - [01 Midlands Exotic Minerals](#01-midlands-exotic-minerals)
@@ -40,12 +40,35 @@
     - [10 Poles Exotic Minerals (white)](#10-poles-exotic-minerals-white)
     - [11 Midlands Exotics and Food](#11-midlands-exotics-and-food)
     - [12 Great Flats Specialized Parts](#12-great-flats-specialized-parts)
+    - [13 Flats Chemicals and Silicon (yellow)](#13-flats-chemicals-and-silicon-yellow)
+    - [14 Lesser Flats Rare Metals (blue)](#14-lesser-flats-rare-metals-blue)
+    - [15 Highlands Rare Metals](#15-highlands-rare-metals)
+    - [16 Greater Flats Industry Park](#16-greater-flats-industry-park)
+    - [17 Great Flats Fuel](#17-great-flats-fuel)
+    - [18 Flats Fuel (purple)](#18-flats-fuel-purple)
+    - [19 Highlands Life Support](#19-highlands-life-support)
   - [Passenger Transport](#passenger-transport)
     - [Passengers from KSC to Kerbin Orbit](#passengers-from-ksc-to-kerbin-orbit)
     - [Passengers from Kerbin Orbit to Minmus Orbit](#passengers-from-kerbin-orbit-to-minmus-orbit)
     - [Transfer Passengers to Depot Expansion](#transfer-passengers-to-depot-expansion)
-  - [Mun Expansion](#mun-expansion)
+  - [The Mun Expansion](#the-mun-expansion)
     - [Mun Shipyard](#mun-shipyard)
+    - [Mun CommNet](#mun-commnet)
+    - [Mun Route Builder Rover](#mun-route-builder-rover)
+    - [Mun Depots](#mun-depots)
+    - [01 Farside Crater Material Kits](#01-farside-crater-material-kits)
+    - [02 Highlands Specialized Parts](#02-highlands-specialized-parts)
+    - [03 East Farside Polymers](#03-east-farside-polymers)
+    - [04 Twin Craters Polymers](#04-twin-craters-polymers)
+    - [05 Canyons Exotic Minerals](#05-canyons-exotic-minerals)
+    - [06 Farside Basin Material Kits](#06-farside-basin-material-kits)
+    - [07 Canyons Electronics and Robotics](#07-canyons-electronics-and-robotics)
+    - [08 Twin Craters Material Kits](#08-twin-craters-material-kits)
+    - [09 East Farside Crater Rare Metals](#09-east-farside-crater-rare-metals)
+    - [10 Farside Crater Specialized Parts](#10-farside-crater-specialized-parts)
+    - [12 Highlands Specialized Parts](#12-highlands-specialized-parts)
+    - [13 Highland Craters Fertilizer](#13-highland-craters-fertilizer)
+    - [14 Polar Crater Exotic Minerals](#14-polar-crater-exotic-minerals)
 - [WOLF Walkthrough Conclusion](#wolf-walkthrough-conclusion)
 
 ## Goals
@@ -728,12 +751,58 @@ Secondly, I've found Minmus hostile to rovers. My rovers will slide forever whil
 
 What I have found easiest for Minmus is using rockets to drop depot expansions onto the surface from orbit. We'll also be shipping crew in from Kerbin, since WOLF requires a significant investment in infrastructure to transport crew (we'll get to that for the Mun expansion).
 
-### Minmus Skycrane
+Resource production required to supply **Minmus Shipyard** will be the minimum required to run 3 x 3.75m _Material Kits_ hoppers and 1 x 3.75m hopper of each remaining building material excluding Prototypes. Here's a summary list, pardon my shorthand in the brackets. The shorthand "Chemicals x 25 (1 x 25)" means "we need 25 chemicals, which is 1 per Material Kit production, and we're producing 25 Material Kits."
+
+1. Material Kits x 25 (15 for station + 5 for electronics + 5 for robotics)
+   - Chemicals x 25 (1 x 25)
+   - Metals x 50 (2 x 25)
+   - Polymers x 50 (2 x 25)
+2. Specialized Parts x 5
+   - Refined Exotics x 10 (2 x 5)
+     - Exotic Minerals x 20 (2 x 2 x 5)
+     - Rare Metals x 30 (3 x 2 x 5)
+   - Silicon x 15 (3 x 5)
+3. Alloys x 6 (1 for station + 5 for Robotics)
+   - Metals x 6 (1 x 6)
+   - Rare Metals x 24 (4 x 6)
+4. Synthetics x 6 (1 + 5 for Electronics)
+   - Exotic Minerals x 24 (4 x 6)
+   - Polymers x 6 (1 x 6)
+5. Electronics x 1
+   - Material Kits x 5
+   - Synthetics x 5
+6. Robotics x 1
+   - Alloys x 5
+   - Material Kits x 5
+
+The sum total thus becomes:
+
+- Chemicals x 25 (only for MK)
+- Exotic Minerals x 44 (20 for SP + 24 for Synthetics)
+- Metals x 56 (50 for MK + 6 for Alloys)
+- Polymers x 56 (50 for MK + 6 for Synthetics)
+- Rare Metals x 54 (30 SP + 24 for Alloys)
+- Silicon x 15 (only for SP)
+
+This will be enough to support production up until around the point we have a thousand Material Kits hoppers.
+
+Later we'll look at producing _Colony Supplies_ at KSC:
+
+1. Colony Supplies x 5 (1 fabricator)
+   1. Machinery x 5 (1 fabricator)
+      1. MaterialKits x 3
+      2. Specialized Parts x 2
+   2. MaterialKits x 3
+   3. Specialized Parts x 2
+
+This amounts to 6 _material Kits_ and 4 _Specialized Parts_ per batch of 5 _Colony Supplies_.
+
+### Minmus CommNet and Skycrane
 
 - Build **Satellite Bundle** and deploy the relay sats
   - Deployer should go to 357.941km x 534.657km orbit
   - Release one relay satellite just before each periapsis
-  - Circularise each relay satellite at periapsis (357.941km circular orbit, 40400s period, aka 1 Minmus rotation)
+  - Circularise each relay satellite at periapsis (357.941km circular orbit, 40400s / 1d 5h 13m period, aka 1 Minmus day)
   - Double-check the deployer's orbit between deployments
   - When three relays are deployed, put the deployer into a 200km polar orbit
   - Deploy the scanner and perform an orbital analysis
@@ -756,7 +825,7 @@ The remaining biome depots can wait until the Minmus Shipyard is self-sufficient
 
 Useful Minmus landing sites:
 
-- Midlands (4.390, -86.594 or 4N 86 43'37"W -- flat plateau to the immediate east of Greater Flats)
+- Midlands (4.390, -86.594 or 4N 86 43'37"W -- flat plateau to the immediate east of Great Flats)
 - Greater Flats (0, -7.5 or 0 7 30'00"W)
 - Flats (1.5, -40 or 1 30' 0"N 40 0' 0"W -- bottom lobe of the flats just NW of Greater Flats)
 - Lesser Flats (9.404, -178.003)
@@ -898,6 +967,8 @@ From here you can skip to **Mun Expansion**, but you'll need to _disconnect **Mi
 
 If you want to improve the Mun expansion experience a little, stick around and we'll look at strategies for maximising output from biome depots. Eventually we'll finish expanding Minmus just to have resources to produce _Prototypes_, _Colony Supplies_ and _Machinery_ anyway. _Colony Supplies_ in particular are important since they are required as part of the WOLF passenger transport system. While flying rockets is fun, being a bus service can get tedious.
 
+The immediate goal of this expansion is to produce the resources needed to provide **Mun Shipyard** with 15 _Material Kits_, 5 _Specialized Parts_, and 1 each of _Alloys_, _Electronics_, _Robotics_ and _Synthetics_.
+
 ### 06 Lowlands Polymers
 
 _Polymers_ are needed for _Material Kits_ and _Synthetics_. More polymers is good!
@@ -1023,16 +1094,110 @@ The crew is
 
 155,580 _Material Kits_.
 
-## Passenger Transport
+### 13 Flats Chemicals and Silicon (yellow)
 
+Crew:
+
+- 2 x Miner
+- Technician
+
+155,530 _Material Kits_
+
+### 14 Lesser Flats Rare Metals (blue)
+
+Imports:
+
+- 1 Food
+- 3 Material Kits
+- 1 Oxygen
+- 5 Water
+
+Crew:
+
+- Engineer
+- Kolonist
+- Mechanic
+- Miner
+- Technician
+
+### 15 Highlands Rare Metals
+
+Nothing required, it's just one extractor using excess power.
+
+Crew:
+
+- Scientist
+- Technician
+
+### 16 Greater Flats Industry Park
+
+This depot expansion will produce enough advanced resources (Sp/A/E/R/S) to get the Mun base up and running. There will be leftover Specialized Parts to send back to Kerbin for Colony Supplies.
+
+### 17 Great Flats Fuel
+
+Produce a bunch of fuel. This will contribute to resources for Mun Shipyard establishment.
+
+Imports:
+
+- 1 Material Kits
+
+Crew:
+
+- 3 x Geologist
+
+Use these resources in Minmus Orbit, cancel the various transfers from Kerbin Orbit to Minmus Orbit. Send the excess fuel from Kerbin Orbit to Mun Orbit Then connect Mun Shipyard's fuel hoppers and start them up.
+
+187,280 _Material Kits_
+
+### 18 Flats Fuel (purple)
+
+Produce more fuel. This will contribute to resources for future expansion shipyards.
+
+Imports:
+
+- 1 Material Kits
+
+Crew:
+
+- 3 x Geologist
+
+As before, uses these resources to displace Minmus Orbit imports, then export to Kerbin Orbit, and then Mun Orbit.
+
+187,280 _Material Kits_
+
+### 19 Highlands Life Support
+
+Produce water and oxygen for life support systems.
+
+Export to Kerbin Orbit and from there to expansion depots, in this case Mun Orbit.
+
+## Passenger Transport
 
 ### Passengers from KSC to Kerbin Orbit
 
+Creating passenger routes is done similarly to creating cargo routes, but there are extra requirements at the origin depot:
+
+- 2 Colony Supplies per luxury berth (colony supplies require specialized parts)
 - 2 habitation per luxury berth for the origin terminal
 - 2 life support per luxury berth for the origin terminal
-- passenger terminal deployed
-- Colony Supplies requires specialised parts!
-- Start with stock passenger transport
+- passenger terminal deployed at origin biome
+- passenger terminal deployed at destination biome
+
+To set up a 3.75m Passenger Terminal (maximum capacity 6 passengers) we'll want to set up a 6 luxury passenger route (luxury routes are faster, but consume double the resources of economy routes):
+
+- 12 x _Colony Supplies_
+  - 36 x _Material Kits_ (3 x 12)
+  - 24 x _Specialized Parts_ (2 x 12)
+- 12 x _Habitation_
+- 12 x _Life Support_
+
+Prepare 6 Passenger SSTO for launch:
+
+- Transfer propellant to KSC Passenger Terminal
+- Start the passenger route
+- Transfer propellant back to 6 Passenger SSTO
+- Launch to orbit
+- Rendezvous with **Kerbin Shipyard**
 
 ### Passengers from Kerbin Orbit to Minmus Orbit
 
@@ -1042,7 +1207,17 @@ The crew is
 - Dock and transfer crew between modules
 - Load crew into Crew Pod and dock crew pod to depot expansion
 
-## Mun Expansion
+## The Mun Expansion
+
+The Mun expansion will be a rehearsal for further expansion into the Kerbol system. The basics will be:
+
+- establish a shipyard
+- transfer WOLF resources using WOLF cargo routes
+- establish communications network
+- build a route builder rover (and land it)
+- prepare WOLF passenger routes
+- build the WOLF infrastructure at the shipyard
+- import crew from Kerbin via the WOLF passenger routes
 
 ### Mun Shipyard
 
@@ -1056,10 +1231,268 @@ The crew is
 - Build the **A/E/R/S Hopper** shipyard component
 - Dock the **A/E/R/S Hopper** to the **Mun Shipyard**
 - Connect the four WOLF Manufacturing Hoppers to the depot and start them
+- Build the **Passenger Terminal** shipyard component
+- Dock the **Passenger Terminal** to **Mun Shipyard**
+
+### Mun CommNet
+
+- Build **Satellite Bundle** and deploy the relay sats
+  - Deployer should go to 357.941km x 534.657km orbit
+  - Release one relay satellite just before each periapsis
+  - Circularise each relay satellite at periapsis (357.941km circular orbit, 40400s / 1d 5h 13m period, aka 1 Minmus day)
+  - Double-check the deployer's orbit between deployments
+  - When three relays are deployed, put the deployer into a 200km polar orbit
+  - Deploy the scanner and perform an orbital analysis
+
+### Mun Route Builder Rover
+
+The **Route Builder Rover** has a nuclear power plant. To build it you need to get an Engineer to the **Mun Shipyard** with _Enriched Uranium_ in order to start the reactor.
+
+- Rendezvous the **Reactor Maintenance** craft with **Kerbin Shipyard** and transfer _supplies_
+- Rendezvous the **Reactor Maintenance** craft with **Mun Shipyard** and dock
+- Build the **Route Builder Rover**
+- Transfer propellant from **Mun Shipyard** to **Route Builder Rover**
+- Undock **Reactor Maintenance** from **Mun Shipyard**
+- Dock **Reactor Maintenance** to **Route Builder Rover**
+- Use the engineer in EVA to _Perform Maintenance_ on the **Route Builder Rover**'s nuclear reactor
+- Return the engineer from EVA and dock **Reactor Maintenance** with **Mun Shipyard**
+- Land the **Route Builder Rover** on **The Mun**
+- Undock **Reactor Maintenance** from **Mun Shipyard**
+- Transfer **Reactor Maintenance** to a parking orbit
+
+Land the **Route Builder Rover** at **Farside Crater**. Build routes from here to:
+
+- Highlands
+- East Farside Crater
+- Twin Craters
+- Canyons
+- (continue to the remaining biomes)
+
+### Mun Depots
+
+Establishing depots will take a few hours. The aim here is the same as for **Minmus**: get the local shipyard to be self-sufficient, get some excess _Specialized Parts_ and _Material Kits_ production to support further expansion of the passenger network, then look at what else can be produced locally to contribute towards _Prototypes_ production back at **Kerbin Shipyard**.
+
+Establish depots in these biomes (locations are flat-ish and level-ish enough to land a rocket or park a rover):
+
+- Canyons (18.150, -50,300) (18.177, -50.448)
+- East Crater (-9.746, 84.452)
+- East Farside Crater (7.109, -150.838) (7° 6' 32.4"N, 150° 50' 16.8"W)
+- Farside Basin (20.618, -93.351) (29 37' 5"N, 93 21' 5"W) or (31.279 96.945) (31 16'44"N 96 53'48"W)
+- Farside Crater (-0.247, -58.873) (0 14' 48"N, 58 53' 2"W)
+- Highland Craters (64.424, 173.655) (64 25' 41"N 173 40' 3"E)
+- Highlands (0.372, -34.280)
+- Lowlands (0.305, -0.530)
+- Midland Craters
+- Midlands (-0.97, 158.681)
+- Northern Basin
+- Northwest Crater (2.926, 17.980) (2 55'34"N 17 59'9"E)
+- Polar Crater (50 52' 4"N 36 32' 59"W)
+- Polar Lowlands (79.666, 108.266)
+- Poles
+- Southwest Crater (-28.202, 8.093) (28 9'55"S 8 14'53"E)
+- Twin Craters (-5.916, 139.817) (5 54'56"S, 139 49' 1"E)
+
+Canyons is unique in having Exotic Minerals and Rare Metals in one biome, from this one depot we can develop an abundance of 160 _Specialized Parts_ and 15 _Synthetics_ (ignoring allocaton of rare metals for alloys or polymers for material kits). Canyons can also be expanded to produce food, water and oxygen.
+
+The highest abundance of manufactured items:
+
+- 95 Material Kits from Twin Craters
+- 125 Specialized Parts from Highlands
+
+The highest sources of base materials are:
+
+- 96 Chemicals from Canyons
+- 130 Exotic Minerals from Polar Crater
+- 68 Metals from East Farside Crater
+- 52 Polymers from East Farside Crater
+- 160 Rare Metals from Farside Basin
+- 160 Silicon from Polar Crater
+
+Life support:
+
+- 140 Food, 78 water from Twin Craters
+- 100 Food, 118 water from Highlands
+
+For these depots on the Mun the crew are usually 12 kerbals, so two flights from KSC to orbit, then to Mun Orbit. Once there is sufficient supply of Specialized Parts there should be sufficient Colony Supplies to launch the 5m passenger route builder 
+
+### 01 Farside Crater Material Kits
+
+Crew:
+
+- Engineer
+- Farmer
+- Kolonist
+- Mechanic
+- Medic
+- Miner x 3
+- Scientist
+- Technician x 3
+
+### 02 Highlands Specialized Parts
+
+Imports:
+
+- 4 x Material Kits
+
+Crew:
+
+- Engineer
+- Farmer
+- Kolonist
+- Mechanic
+- Medic
+- Miner x 3
+- Scientist
+- Technician x 3
+
+### 03 East Farside Polymers
+
+Crew:
+
+- Engineer
+- Farmer
+- Kolonist
+- Mechanic
+- Medic
+- Miner x 3
+- Scientist
+- Technician x 3
+
+### 04 Twin Craters Polymers
+
+Crew:
+
+- Engineer
+- Farmer
+- Kolonist
+- Mechanic
+- Medic
+- Miner x 3
+- Scientist
+- Technician x 3
+
+### 05 Canyons Exotic Minerals
+
+Imports:
+
+- 2 fertilizer
+- 4 material kits
+
+Crew:
+
+- Engineer
+- Kolonist
+- Farmer
+- Mechanic
+- Medic
+- Miner x 2
+- Scientist
+- Technician x 2
+
+### 06 Farside Basin Material Kits
+
+Imports:
+
+- 1 Food
+
+Crew:
+
+- Engineer
+- Kolonist
+- Mechanic
+- Medic
+- Miner x 2
+- Scientist
+- Technician x 3
+
+Build Cost: 431,820 Material Kits
+
+### 07 Canyons Electronics and Robotics
+
+Imports:
+
+- 11 x Material Kits
+- 6 x Metals
+
+Crew:
+
+- 2 x Miner
+- Scientist
+- 2 x Technician
+
+Build Cost: 159,910 Material Kits
+
+### 08 Twin Craters Material Kits
+
+Imports:
+
+- 12 x Polymers
+
+Crew:
+
+- 2 x Miner
+- 4 x Technician
+
+Build Cost: 371820
+
+### 09 East Farside Crater Rare Metals
+
+Prepare 110 route capacity between East Farside Crater and Farside Crater.
+
+Imports:
+
+- 1 x Material Kits
+
+Crew:
+
+- Kolonist
+- 2 x Miner
+- 2 x Technician
+
+Build Cost: 316,820 Material Kits
+
+### 10 Farside Crater Specialized Parts
+
+Crew:
+
+- Miner
+- Technician x 5
+
+Build Cost: 278,395 Material Kits
+
+### 12 Highlands Specialized Parts
+
+Imports:
+
+- Material Kits x 2
+
+Crew:
+
+- Miner x 2
+- Technician x 4
+
+Build Cost:
+
+### 13 Highland Craters Fertilizer
+
+Imports:
+
+- Material Kits x 4
+
+Crew:
+
+- Engineer
+- Farmer
+- Kolonist
+- Mechanic
+- Medic
+- Scientist
+
+### 14 Polar Crater Exotic Minerals
 
 # WOLF Walkthrough Conclusion
 
-We haven't finished building this walkthrough. Still to come are establishing infrastructure on Minmus, and ultimately building craft using the shipyard.
+We haven't finished building this walkthrough. Still to come are establishing infrastructure on Mun, and building the Duna fleet.
 
 Come back later to check things out.
 

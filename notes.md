@@ -4,22 +4,17 @@
 
 How to keep track of which crew are required for which infrastructure lander?
 
-1. Build in batches. One lander for each biome, record what crew are required for each lander, send all the crew in one batch.
-2. Name each lander uniquely, keep a record of which lander is going to which biome and what crew it requires, send crew as required for each lander
+Early in the game I build a lander with a detachable crew capsule. Launch the crew capsule from KSC and fly it to the lander that is built at the remote shipyard. Then dock the capsule to the lander and land it!
 
-Example:
+Later when we have WOLF passenger transport available I'll build the lander and then send the crew. It's easy enough to remember that the next crew to arrive is for the lander in orbit. It gets complicated when there are multiple passenger routes, at which point I simply have to keep the list organised by lander name:
 
-### Crew Transport Votine
++ 04 Twin Craters Polymers
+  + Jazer Kerman
+  + Maucan Kerman
+  + Tevan Kerman
++ etc
 
-N/A
-
-### Crew Transport Pacer
-
-N/A
-
-### Crew Transport Telpix
-
-N/A
+Then just remember to bring the lander near the passenger terminal to transfer crew.
 
 ### Mun Route Builder 1
 
@@ -190,7 +185,7 @@ The sum total thus becomes:
 
 This will be enough to support production up until around the point we have a thousand Material Kits hoppers.
 
-Note that Material Kits and Specialized Parts are also required for Colony Supplies and Machinery. Colony Supplies are required to manage passenger routes in WOLF, Machinery is only used in MKS.
+Note that _Material Kits_ and _Specialized Parts_ are also required for _Colony Supplies_ and _Machinery_. _Colony Supplies_ are required to manage passenger routes in WOLF, and apart from being required for _Colony Supplies_, _Machinery_ is only used in MKS.
 
 #### Expansion Shipyard
 
@@ -310,6 +305,18 @@ So rough plan:
 + Great Flats for Alloys
 + Further depot expansion to extract remaining exotics, rares, polymers, metals
 
+## Mun
+
+### Depot Candidates:
+
++ Alloys
+  + East Farside Crater (Alloys, Robotics, Food, Fertilizer, Water)
++ Electronics
++ Robotics
++ Synthetics
+
+
+
 ## Passengers to Orbit
 
  54 passengers (6 * 9) requires:
@@ -317,6 +324,12 @@ So rough plan:
 + 108 extra habitation
 + 108 extra life support
 + 4 food, 4 oxygen, 20 water
+
+Note that some addons will prevent routes showing up. My list of suspects that I haven't delved into further:
+
++ MechJeb 2
++ Docking Port Alignment Indicator
++ Kerbal Alarm Clock
 
 ## Screenshots required
 
@@ -337,7 +350,7 @@ So rough plan:
 + Poles (82 43'31"N 77 16'36"W)
 + Lowlands (0.026, -51.516)
 + Midlands (4.390, -86.594 -- flat plateau)
-+ Highlands (0N, 82E -- equator East of Greater Flats)
++ Highlands (0N, 82E -- equator East of Greater Flats) (0 6'15"S 78 18'4"E))
 + Slopes
 + Flats (1 49'32"N, 40 13'8"W -- just NW of Greater Flats)
 + Lesser Flats (9.404, -178.003)
@@ -352,21 +365,21 @@ Satellites:
 
 ### Mun
 
-+ Canyons (18.150, -50,300) (18.177, -50.448)
-+ East Crater
++ Canyons (18.150, -50,300) (18 9' 0"N, 50 18'0"W) (18.177, -50.448)
++ East Crater (-0.617, 81.593)
 + East Farside Crater (7.109, -150.838)
 + Farside Basin (20.618, -93.351) (29 37' 5"N, 93 21' 5"W)
 + Farside Crater (-0.247, -58.873) (0 14' 48"N, 58 53' 2"W)
 + Highland Craters (64.424, 173.655) (64 25' 41"N 173 40' 3"E)
 + Highlands (0.372, -34.280)
-+ Lowlands (0.305, -0.530)
-+ Midland Craters
-+ Midlands
-+ Northern Basin
++ Lowlands (0.305, -0.530) (0 18'18"N, 0 31'48"W)
++ Midland Craters (4.542, 43.048) (4 32'31"N, 43 2'59"E)
++ Midlands (0,96.966) (0N, 96 58'20"E)
++ Northern Basin (36.592, 61.975) (36 35'34"N, 61 58'47"E)
 + Northwest Crater
 + Polar Crater (50 52' 4"N 36 32' 59"W)
-+ Polar Lowlands (79.666, 108.266)
-+ Poles
++ Polar Lowlands (79.666, 108.266) (79° 39' 57.6"N, 108° 15' 57.6"E)
++ Poles (74.464, 83.926) (74 27'56"N, 83 59'3"E)
 + Southwest Crater
 + Twin Craters (-5.916, 139.817) (5 54'56"S, 139 49' 1"E)
 
@@ -384,6 +397,13 @@ Satellites:
 ## Uraninite For Nuclear Reactor Fuel
 
 + Mun, Farside Crater 6.76% (2.943, 61.761)
+
+## Bon Voyage
+
++ RotationVector
+  0. "up" sitting on nose
+  1. "down" sitting on rear clamp-o-tron Sr
+  2. "forward" right way up
 
 ## To Do
 
