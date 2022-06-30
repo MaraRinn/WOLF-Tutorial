@@ -199,8 +199,8 @@ Note that the Duna Shipyard comes with hoppers for Material Kits, Specialized Pa
 
 #### A/E/R/S Hopper
 
-+ 31722 Material Kits
-+ 353 Specialised Parts
++ 32230 Material Kits
++ 369 Specialised Parts
 + 94 Alloys
 + 145 Synthetics
 + 20 Robotics
@@ -389,6 +389,11 @@ Satellites:
 + Satellite orbit:
 + Deployer apoapsis:
 + "Low" orbit is under 60km
+
+### Duna
+
++ Lowlands (10.199, 78.161)
++ Northern Shelf (43.572, 37.790)
 
 ### Eve
 

@@ -66,9 +66,11 @@
     - [08 Twin Craters Material Kits](#08-twin-craters-material-kits)
     - [09 East Farside Crater Rare Metals](#09-east-farside-crater-rare-metals)
     - [10 Farside Crater Specialized Parts](#10-farside-crater-specialized-parts)
-    - [12 Highlands Specialized Parts](#12-highlands-specialized-parts)
-    - [13 Highland Craters Fertilizer](#13-highland-craters-fertilizer)
-    - [14 Polar Crater Exotic Minerals](#14-polar-crater-exotic-minerals)
+    - [11 Highlands Specialized Parts](#11-highlands-specialized-parts)
+    - [12 Polar Crater Exotic Minerals](#12-polar-crater-exotic-minerals)
+  - [Duna Expansion](#duna-expansion)
+    - [Relay Satellites](#relay-satellites)
+    - [01 Midland Sea Material Kits](#01-midland-sea-material-kits)
 - [WOLF Walkthrough Conclusion](#wolf-walkthrough-conclusion)
 
 ## Goals
@@ -1225,7 +1227,13 @@ The Mun expansion will be a rehearsal for further expansion into the Kerbol syst
 - Transfer 15 _Material Kits_, 5 _Specialized Parts_, 1 _Alloys_, 1 _Electronics_, 1 _Robotics_ and 1 _Synthetics_ to _the Mun_
 - Build **Expansion Shipyard** at **Kerbin Shipyard**
 - Rename **Expansin Shipyard** to **Mun Shipyard**
-- Provide **Mun Shipyard** with starter resources of _Alloys_, _Electronics_, _Robotics_ and _Prototypes_
+- Provide **Mun Shipyard** with starter resources of _Alloys_, _Electronics_, _Robotics_ and _Prototypes_ (basically enough to build the A/E/R/S Hopper)
+  - 94 Alloys
+  - 145 Synthetics
+  - 20 Robotics
+  - 20 Prototypes
+  - (No electronics required to bootstrap)
+  - (Material Kits and Specialized Parts will arrive via WOLF Transfers)
 - Send **Mun Shipyard** to _the Mun_
 - Once at _the Mun_ put **Mun Shipyard** into a circular 30km orbit at 0 inclination
 - Build the **A/E/R/S Hopper** shipyard component
@@ -1460,7 +1468,7 @@ Crew:
 
 Build Cost: 278,395 Material Kits
 
-### 12 Highlands Specialized Parts
+### 11 Highlands Specialized Parts
 
 Imports:
 
@@ -1473,11 +1481,12 @@ Crew:
 
 Build Cost:
 
-### 13 Highland Craters Fertilizer
+### 12 Polar Crater Exotic Minerals
 
 Imports:
 
-- Material Kits x 4
+- Fertilizer x 2
+- Material Kits x 3
 
 Crew:
 
@@ -1488,13 +1497,75 @@ Crew:
 - Medic
 - Scientist
 
-### 14 Polar Crater Exotic Minerals
+Build Cost: 216600 Material Kits
+
+## Duna Expansion
+
+Build these ships and send them to Duna, try to get them to arrive in this order too:
+
+- Duna Shipyard
+- Cargo route builder
+- Passenger route builder
+- Reactor Maintenance with Engineer and Pilot (if you plan to use the Route Builder Rover)
+
+Remember to add the materials to the shipyard that it will need to build the **A/E/R/S Hopper**:
+
+- 94 Alloys
+- 145 Synthetics
+- 20 Robotics
+
+Establish the shipyard at a "low" Duna Orbit (100km or less), then:
+
+- connect the cargo route to the Duna:Orbit depot
+- transfer 5 x _Material Kits_, 5 x _Specialized Parts_, and 1 each of Alloys, Electronics, Robotics and Synthetics from Kerbin:Orbit to Duna:Orbit
+- connect the _Specialized Parts_ hopper and one _Material Kits_ hopper to the depot and start them up
+- Deploy the Orbital Shipyard when you have 4000 _Material Kits_ (about 6 hours)
+- If you have an engineer available, deconstruct the fuel tanks and engines that were used to deliver the **Duna Shipyard** to Duna (this should produce a reasonable amount of the advanced resources)
+- Build the **A/E/R/S Hopper** and attach it to the shipyard (requires about 6 days of resource production)
+- Build the **Passenger Terminal** and attach it to the shipyard (requires about 10 days of production)
+- connect the passenger route to the Duna:Orbit depot
+- set up relay satellites at 60 degrees and 120 degrees from Ike, in circular orbits with the same period
+- deploy rover to survey biomes
+
+From here the process is the same as the previous expansions:
+
+1. 5 Fuel to support depot landers
+1. 15 Material Kits
+1. 5 Fertilizer + 5 Supplies to support passenger terminal
+1. 1 each A/E/R/S
+1. 5 Specialized Parts
+
+That will conclude this walkthrough, by now you have the idea of how the WOLF infrastructure works and should be able to write your own adventures!
+
+### Relay Satellites
+
+Ike orbital period is 65,766.7s (3d 0h 11m).
+
+### 01 Midland Sea Material Kits
+
+You should now have a passenger route set up between Kerbin Orbit and Duna Orbit. Time to put it to use.
+
+Imports:
+
+- Food
+- Oxygen
+- 5 x Water
+
+Crew:
+
+- Engineer
+- Kolonist
+- Mechanic
+- Miner
+- 2 x Technician
+
+Get that crew transferred to Kerbin Shipyard. Once there, send them off to Duna. This route will take 1y 367d. That's a lot of time to be waiting for things to happen!
+
+Spend the time exploring the other biomes, establishing Depots, and perhaps even sending new shipyards and route builders to Eve, Moho and Jool.
 
 # WOLF Walkthrough Conclusion
 
-We haven't finished building this walkthrough. Still to come are establishing infrastructure on Mun, and building the Duna fleet.
-
-Come back later to check things out.
+This is the end of the walkthrough for now. You have the tools and training required to use the WOLF Industry system. Good luck with your adventures!
 
 [MRWOLFTS]: https://github.com/MaraRinn/WOLF-Tutorial-Ships "Mara Rinn's WOLF Tutorial Ships repository"
 [RDWOLF1]: https://docs.google.com/document/d/1zft2Ka9gubOYQf4CQgvReTxpnP8_LQYNyHouEjQZqjw/edit "Roverdude's introduction to WOLF"
